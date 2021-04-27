@@ -1,0 +1,411 @@
+body{
+    font-family: sans-serif;
+    background-color: black;
+}
+
+a {
+    text-decoration:none; 
+    color: white;
+}
+
+.header{
+    margin-bottom: 80%;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color:white;
+    font-size: 18px;
+    position: fixed;
+}
+
+.minitsuki{
+    padding-top: 30px;
+    padding-left: 20px;
+}
+
+.header_text{
+    margin: 0 0 0 auto;
+    padding-right: 10px;
+    width: 50%;
+    display: flex;
+	justify-content: space-between;
+}
+
+
+.pickup_text{
+    animation: flash 1.5s linear infinite;
+    color: white;
+    border-bottom: 1px solid white;
+    padding: 3px 45px 3px 45px;
+    margin-right: 10px;
+}
+
+@keyframes flash {
+  0%,100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+
+.Top{
+    display: flex;
+    width: 100%;
+}
+
+.rogo{
+    width: 50%;
+    margin-top: 450px;
+    margin-right: 0px;
+    margin-left: 150px;
+}
+
+.tsuki{
+    margin-top: 150px;
+    margin-right: 100px;
+    margin-left: 300px;
+    width: 50%;
+
+}
+
+
+.btnlinestretches1{
+    /*線の基点とするためrelativeを指定*/
+  position:relative;
+  color: white;
+  display:inline-block;
+    text-decoration: none;
+    outline: none;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 550px;
+    margin-bottom: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+/*線の設定*/
+.btnlinestretches1::before {
+    content: "";
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: 0;
+    /*線の形状*/
+    width: 100%;
+    height: 1px;
+    background: white;
+}
+
+
+/*線と矢印を繰り返しアニメーション*/
+.btnlinestretches1::before {
+    animation: arrowlong01 2s ease infinite;
+}
+.btnlinestretches1::after {
+    animation: arrowlong02 s ease infinite;
+}
+
+@keyframes arrowlong01{
+    0%{width:0;opacity:0}
+    20%{width:0;opacity:1}
+    80%{width: 30%;opacity:1}
+    100%{width: 30%;opacity:0}
+}
+
+@keyframes arrowlong02{
+    0%{left:0;opacity:0}
+    20%{left:0;opacity:1}
+    80%{left:30%;opacity:1}
+    100%{left:30%;opacity:0}
+}
+
+
+.horizontal-list {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+.RecomennditionParty{
+    display: inline-block;
+    width: 100%;
+    height: 567px;
+    margin: 16px;
+    font-size: 22px;
+    color: white;
+}
+
+.Party{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.date{
+    width: 50%;
+    padding-left: 400px;
+}
+
+.flyer{
+    width: 50%;
+    height: 100%;
+    padding-right: 300px;
+}
+
+.title{
+    font-size: 32px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.datetime{
+    display: flex;
+}
+
+.time{
+    font-size: 14px;
+    padding-top: 19px;
+    padding-left: 10px;
+}
+
+.Music_by{
+    padding-top: 50px;
+    font-size: 18px;
+}
+
+.dj{
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.wanted_text{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wanted_text_title{
+    margin-top: 300px;
+    margin-bottom: 80px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.wanted_text_text{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.話してみる{
+    margin-top: 50px;
+    margin-bottom: 200px;
+    padding: 10px 80px 10px 80px;
+    border: 1px solid grey;
+    border-radius: 40px;
+    background-color: grey;
+    color: black;
+    animation: flash 1.5s linear infinite
+}
+
+.contact_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input {
+  width: 328px;
+  height: 36px;
+  font-size: 18px;
+  color: white;
+  border: none;
+  outline: 0;
+  border-bottom: 1px solid #d1d5db;
+}
+
+.inputcome{
+  width: 328px;
+  height: 500px;
+  color: white;
+  font-size: 18px;
+  outline: 0;
+  border: 1px solid #d1d5db;
+}
+
+.underline {
+  width: 328px;
+  height: 1px;
+  background: skyBlue;
+  transform-origin: center center;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-out;
+}
+
+.input:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+
+.input:focus + .underline{
+    transform: scaleX(1);
+}
+
+.underlinecome {
+  width: 328px;
+  height: 1px;
+  padding-bottom: 2px;
+  background: skyBlue;
+  transform-origin: center center;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-out;
+}
+
+.inputcome:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+
+.inputcome:focus + .underlinecome {
+    transform: scaleX(1);
+}
+
+
+
+
+.motivation_form input[type="checkbox"]{
+	display: none;
+}
+
+.motivation_form input[type="checkbox"]+label{
+	display: none;
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	padding-left: 65px;
+	padding-right: 10px;
+}
+
+.motivation_form input[type="checkbox"]+label:before{
+	content:"";
+	position: absolute;
+	display: inline-block;
+	box-sizing: border-box;
+	width: 24px;
+	height: 24px;
+	margin-top: -10px;
+	left: 0;
+	top: 40%;
+	background-color: #f0ebe5;
+    border-radius: 5px;
+}
+
+.motivation_form input[type="checkbox"]:checked+label:after{
+	content: "";
+	position: absolute;
+	display: block;
+	box-sizing: border-box;
+	width: 24px;
+	height: 24px;
+	margin-top: -18px;
+	top: 30%;
+	left: 3px;
+	z-index: 2;
+	/* rotate(回転) */
+	transform: rotate(-45deg);
+	border-left: 3px solid;
+	border-color: #2718f8; 
+}
+
+
+.contact_form td{
+    color: white;
+    font-size: 18px;
+	padding-right: 120px;
+	padding-bottom: 24px;
+}
+
+
+.contact_form p{
+	margin-bottom: 24px;
+}
+
+.contact_form label{
+	font-size: 22px;
+    color: white;
+	vertical-align: middle;
+}
+
+.position_remake {
+	text-align: left;
+	vertical-align: top;
+}
+
+.access{
+	padding-bottom: 64px;
+	display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.access_text{
+	font-size: 24px;
+	padding-bottom: 24px;
+}
+
+.ACCESS{
+	padding-top: 64px;
+}
+
+.gmap {
+height: 0;
+overflow: hidden;
+padding-bottom: 56.25%;
+position: relative;
+}
+.gmap iframe {
+position: absolute;
+left: 0;
+top: 0;
+height: 100%;
+width: 100%;
+}
+
+
+.学校詳細{
+	padding-top: 64px;
+	padding-bottom: 80px;
+	display: flex;
+	justify-content: center;
+    color: white;
+}
+
+.事務所所在地{
+	padding-top: 24px;
+	padding-bottom: 24px;
+}
+
+.FAX{
+	padding-top: 24px;
+	padding-bottom: 24px;
+}
+
+.福岡県{
+	padding-top: 24px;
+	padding-bottom: 24px;
+}
+
+.チーズアカデミーFUKUOKA{
+	margin-left: 48px;
+}
+
+.FAX{
+	padding-top: 24px;
+	padding-bottom: 24px;
+}
