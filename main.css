@@ -9,8 +9,6 @@ a {
 }
 
 .header{
-    margin-bottom: 80%;
-    height: 50px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -20,16 +18,69 @@ a {
 }
 
 .minitsuki{
-    padding-top: 30px;
     padding-left: 20px;
 }
 
 .header_text{
-    margin: 0 0 0 auto;
-    padding-right: 10px;
+    margin: 10px 0 0 auto;
     width: 50%;
     display: flex;
 	justify-content: space-between;
+}
+
+/*==================================================
+共通　横並びのための設定
+===================================*/
+
+.gnavi{
+    display: flex;
+    list-style: none;
+}
+
+.gnavi li a{
+    display: block;
+    padding:10px 30px;
+    text-decoration: none;
+}
+
+.gnavi li{
+    margin-bottom:20px;
+}
+
+/*==================================================
+　5-3-1 中心から外に線が伸びる（下部）
+===================================*/
+
+.gnavi li a{
+    /*線の基点とするためrelativeを指定*/
+	position: relative;
+}
+
+.gnavi li.current a,
+.gnavi li a:hover{
+	color: white;
+}
+
+.gnavi li a::after {
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    /*線の形状*/
+    width: 80%;
+    height: 2px;
+    background:white;
+    /*アニメーションの指定*/
+    transition: all .6s;
+    transform: scale(0, 1);/*X方向0、Y方向1*/
+    transform-origin: center top;/*上部中央基点*/
+}
+
+/*現在地とhoverの設定*/
+.gnavi li.current a::after,
+.gnavi li a:hover::after {
+    transform: scale(1, 1);/*X方向にスケール拡大*/
 }
 
 
@@ -38,8 +89,8 @@ a {
 .pickup_text{
     animation: flash 1.5s linear infinite;
     color: white;
-    border-bottom: 1px solid white;
-    padding: 3px 45px 3px 45px;
+    padding-top: 10px;
+    padding-left: 20px;
     margin-right: 10px;
 }
 
@@ -135,7 +186,7 @@ a {
 .RecomennditionParty{
     display: inline-block;
     width: 100%;
-    height: 567px;
+    height: 600px;
     margin: 16px;
     font-size: 22px;
     color: white;
@@ -205,7 +256,8 @@ a {
 }
 
 .speak{
-    margin-top: 50px;
+    margin-top: 100px;
+    margin-bottom: 200px;
     padding: 10px 80px 10px 80px;
     border: 1px solid grey;
     border-radius: 40px;
