@@ -149,72 +149,78 @@
             <p>DJ、Bar、照明、デザイナーを探していますが</p>
             <p class="wanted_text_text">その他にも自分はこんなことができるっていうのがあれば大歓迎です。</p>
             <p>まずはお酒でものみながら、話してみませんか？</p>
-            <a href="" class="speak">話してみる</a>
+                <div class="btn"> <button id="btn">
+                        <p class="speak">話してみる</p>
+                    </button></div>
+                
+                <div class="hidden_news" id="hidden_news">
+                    <div class="contact_form">
+                        <table class="contact_form_table">
+                            <tr>
+                                <td>名前</td>
+                                <td class="form_text">
+                                    <input class="input" type="text" placeholder="お名前">
+                                    <div class="underline"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>カナ</td>
+                                <td class="form_text">
+                                    <input class="input" type="text" placeholder="カナ">
+                                    <div class="underline"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>メールアドレス</td>
+                                <td class="form_text">
+                                    <input class="input" type="e-mail" placeholder="メールアドレス">
+                                    <div class="underline"></div>
+                                </td>
+                            </tr>
+                
+                
+                            <tr>
+                                <td>志望動機</td>
+                                <td>
+                                    <div class="motivation_form">
+                                        <p>
+                                            <input type="checkbox" id="motivation1">
+                                            <label for="motivation1">DJ</label>
+                                        </p>
+                                        <p>
+                                            <input type="checkbox" id="motivation2">
+                                            <label for="motivation2">Bar</label>
+                                        </p>
+                                        <p>
+                                            <input type="checkbox" id="motivation3">
+                                            <label for="motivation3">Lighting</label>
+                                        </p>
+                                        <p>
+                                            <input type="checkbox" id="motivation4">
+                                            <label for="motivation4">その他</label>
+                                        </p>
+                                    </div>
+                                </td>
+                            </tr>
+                
+                
+                            <tr>
+                                <td>ご質問等</td>
+                                <td class="form_text">
+                                    <textarea class="inputcome" placeholder="何かあれば" name="" id="" cols="30" rows="10"></textarea>
+                                    <div class="underlinecome"></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
         </div>
     </div>
 
 
 
 
-    <div class="contact_form">
-        <table class="contact_form_table">
-            <tr>
-                <td>名前</td>
-                <td class="form_text">
-                    <input class="input" type="text" placeholder="お名前">
-                    <div class="underline"></div>
-                </td>
-            </tr>
-            <tr>
-                <td>カナ</td>
-                <td class="form_text">
-                    <input class="input" type="text" placeholder="カナ">
-                    <div class="underline"></div>
-                </td>
-            </tr>
-            <tr>
-                <td>メールアドレス</td>
-                <td class="form_text">
-                    <input class="input" type="e-mail" placeholder="メールアドレス">
-                    <div class="underline"></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td>志望動機</td>
-                <td>
-                    <div class="motivation_form">
-                        <p>
-                            <input type="checkbox" id="motivation1">
-                            <label for="motivation1">DJ</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" id="motivation2">
-                            <label for="motivation2">Bar</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" id="motivation3">
-                            <label for="motivation3">Lighting</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" id="motivation4">
-                            <label for="motivation4">その他</label>
-                        </p>
-                    </div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td>ご質問等</td>
-                <td class="form_text">
-                    <textarea class="inputcome" placeholder="何かあれば" name="" id="" cols="30" rows="10"></textarea>
-                    <div class="underlinecome"></div>
-                </td>
-            </tr>
-        </table>
-    </div>
+    
     
     
     <div class="access">
@@ -249,7 +255,7 @@
     </div>
 
 
-
+<script src="js/main.js"></script>
 
 </body>
 </html>
