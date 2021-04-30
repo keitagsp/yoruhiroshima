@@ -1,19 +1,32 @@
 body{
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: black;
+    font-weight: 100;
 }
+
+/* font-family: 'Abel', sans-serif;
+font-family: 'Amatic SC', cursive;
+font-family: 'Fira Sans', sans-serif;
+font-family: 'IBM Plex Sans', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Ropa Sans', sans-serif;
+font-family: 'Yantramanav', sans-serif; */
+
 
 a {
     text-decoration:none; 
     color: white;
 }
 
+
 .header{
     width: 100%;
     display: flex;
     align-items: center;
     color:white;
-    font-size: 18px;
+    font-size: 20px;
     position: fixed;
 }
 
@@ -23,14 +36,9 @@ a {
 
 .header_text{
     margin: 10px 0 0 auto;
-    width: 50%;
     display: flex;
 	justify-content: space-between;
 }
-
-/*==================================================
-共通　横並びのための設定
-===================================*/
 
 .gnavi{
     display: flex;
@@ -47,9 +55,6 @@ a {
     margin-bottom:20px;
 }
 
-/*==================================================
-　5-3-1 中心から外に線が伸びる（下部）
-===================================*/
 
 .gnavi li a{
     /*線の基点とするためrelativeを指定*/
@@ -77,13 +82,11 @@ a {
     transform-origin: center top;/*上部中央基点*/
 }
 
-/*現在地とhoverの設定*/
+
 .gnavi li.current a::after,
 .gnavi li a:hover::after {
     transform: scale(1, 1);/*X方向にスケール拡大*/
 }
-
-
 
 
 .pickup_text{
@@ -114,12 +117,12 @@ a {
     width: 50%;
     margin-top: 450px;
     margin-right: 0px;
-    margin-left: 150px;
+    margin-left: 200px;
 }
 
 .tsuki{
     margin-top: 150px;
-    margin-right: 100px;
+    margin-right: 50px;
     margin-left: 300px;
     width: 50%;
 
@@ -133,10 +136,11 @@ a {
   display:inline-block;
     text-decoration: none;
     outline: none;
-    font-size: 22px;
+    font-size: 32px;
     font-weight: bold;
     margin-top: 550px;
     margin-bottom: 300px;
+    padding-bottom: 8px;
     display: flex;
     justify-content: center;
 }
@@ -165,7 +169,7 @@ a {
 @keyframes arrowlong01{
     0%{width:0;opacity:0}
     20%{width:0;opacity:1}
-    80%{width: 30%;opacity:1}
+    80%{width: 15%;opacity:1}
     100%{width: 30%;opacity:0}
 }
 
@@ -210,7 +214,7 @@ a {
 }
 
 .Party_title{
-    font-size: 32px;
+    font-size: 38px;
     font-weight: bold;
     padding-bottom: 60px;
 }
@@ -236,6 +240,7 @@ a {
 }
 
 .wanted_text{
+    font-size: 18px;
     color: white;
     display: flex;
     justify-content: center;
@@ -243,10 +248,119 @@ a {
     flex-direction: column;
 }
 
+.News_box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.News{
+    display: flex;
+	justify-content: space-evenly;
+    color: white;
+    margin-top: 130px;
+    margin-bottom: 200px;
+	width: 100%;
+}
+
+.nori_date{
+    font-size: 22px;
+    font-weight: bold;
+	margin-top: 32px;
+	margin-bottom: 24px;
+}
+
+.nori{
+	width: 15%;
+	justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nori img{
+	width: 100%;
+}
+
+.swet_date{
+    font-size: 22px;
+    font-weight: bold;
+	margin-top: 32px;
+	margin-bottom: 24px;
+}
+
+.swet{
+	width: 15%;
+	justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.swet img{
+	width: 100%;
+}
+
+.umi_date{
+    font-size: 22px;
+    font-weight: bold;
+	margin-top: 32px;
+	margin-bottom: 24px;
+}
+
+.umi{
+	width: 15%;
+	justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.umi img{
+	width: 100%;
+}
+
+.beer_date{
+    font-size: 22px;
+    font-weight: bold;
+	margin-top: 32px;
+	margin-bottom: 24px;
+}
+
+.beer{
+	width: 15%;
+	justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.beer img{
+	width: 100%;
+}
+
+.ondo_date{
+    font-size: 22px;
+    font-weight: bold;
+	margin-top: 32px;
+	margin-bottom: 24px;
+}
+
+.ondo{
+	width: 15%;
+	justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ondo img{
+	width: 100%;
+}
+
+
+
 .wanted_text_title{
     margin-top: 300px;
     margin-bottom: 80px;
-    font-size: 24px;
+    width: 100%;
+    font-size: 30px;
     font-weight: bold;
 }
 
@@ -265,6 +379,62 @@ a {
     color: black;
     animation: flash 1.5s linear infinite
 }
+
+
+
+
+
+/*== ボタン共通設定 */
+.中央から外{
+    /*アニメーションの起点とするためrelativeを指定*/
+    position: relative;
+	overflow: hidden;
+    /*ボタンの形状*/
+	text-decoration: none;
+	display: inline-block;
+   	border: 1px solid #555;/* ボーダーの色と太さ */
+    padding: 10px 30px;
+	text-align: center;
+    outline: none;
+    /*アニメーションの指定*/   
+    transition: ease .2s;
+}
+
+/*ボタン内spanの形状*/
+.中央から外 span {
+	position: relative;
+	z-index: 3;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
+	color:#333;
+}
+
+.中央から外:hover span{
+	color:#fff;
+}
+
+/*== 背景が流れる（中央から外） */
+
+.bgcenterout:before {
+	content: '';
+    /*絶対配置で位置を指定*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+    /*色や形状*/
+	background: #333;
+	width: 100%;
+	height: 100%;
+    /*アニメーション*/
+	transition: transform .3s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+	transform: scale(0, 0);
+	transform-origin:center;
+}
+
+/*hoverした際の形状*/
+.bgcenterout:hover:before{
+	transform:scale(1, 1);
+}
+
 
 .contact_form{
     display: flex;
@@ -398,6 +568,16 @@ a {
 	vertical-align: top;
 }
 
+.送信{
+    margin: 100px 0px 200px 50px;
+    padding: 10px 80px 10px 80px;
+    border: 1px solid grey;
+    border-radius: 40px;
+    background-color: grey;
+    color: black;
+}
+
+
 .access{
     margin-top: 100px;
 	margin-bottom: 64px;
@@ -419,7 +599,7 @@ a {
 }
 
 .access_text{
-	font-size: 24px;
+	font-size: 30px;
 	padding-bottom: 24px;
 }
 
@@ -468,4 +648,16 @@ top: 0;
 
 .hidden_news{
     display: none;
+}
+
+.Arts{
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    height: 50px;
+    width: 100%;
+    background-color: rgb(26, 25, 25);
+    color: white;
 }
