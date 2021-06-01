@@ -240,81 +240,77 @@
                     <button id="btn">
                         <!-- <p class="speak">話してみる</p> -->
                         <p class="中央から外 bgcenterout speak"><span>話してみる</span></p>
-
                     </button>
                 </div>
-                   
-                
+
                 <div class="hidden_news" id="hidden_news">
                     <div class="contact_form">
                         <table class="contact_form_table">
-                            <tr>
-                                <td>名前</td>
-                                <td class="form_text">
-                                    <input class="input" type="text" placeholder="お名前">
-                                    <div class="underline"></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>カナ</td>
-                                <td class="form_text">
-                                    <input class="input" type="text" placeholder="カナ">
-                                    <div class="underline"></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>メールアドレス</td>
-                                <td class="form_text">
-                                    <input class="input" type="e-mail" placeholder="メールアドレス">
-                                    <div class="underline"></div>
-                                </td>
-                            </tr>
-                
-                
-                            <tr>
-                                <td>志望動機</td>
-                                <td>
-                                    <div class="motivation_form">
-                                        <p>
-                                            <input type="checkbox" id="motivation1">
-                                            <label for="motivation1">DJ</label>
-                                        </p>
-                                        <p>
-                                            <input type="checkbox" id="motivation2">
-                                            <label for="motivation2">Bar</label>
-                                        </p>
-                                        <p>
-                                            <input type="checkbox" id="motivation3">
-                                            <label for="motivation3">Lighting</label>
-                                        </p>
-                                        <p>
-                                            <input type="checkbox" id="motivation4">
-                                            <label for="motivation4">その他</label>
-                                        </p>
-                                    </div>
-                                </td>
-                            </tr>
-                
-                
-                            <tr>
-                                <td>ご質問等</td>
-                                <td class="form_text">
-                                    <textarea class="inputcome" placeholder="何かあれば" name="" id="" cols="30" rows="10"></textarea>
-                                    <div class="underlinecome"></div>
-                                    <p class="中央から外 bgcenterout 送信"><span>送信</span></p>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    
-                                </td>
-                            </tr>
-
-
+                            <form action="create.php" method="POST">
+                                <tr>
+                                    <td>名前</td>
+                                    <td class="form_text">
+                                        <input class="input" type="text" placeholder="名前" name="name">
+                                        <div class="underline">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>かな</td>
+                                    <td class="form_text">
+                                        <input class="input" type="text" placeholder="かな" name="kana">
+                                        <div class="underline">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>メールアドレス</td>
+                                    <td class="form_text">
+                                        <input class="input" type="e-mail" placeholder="メールアドレス" name="email">
+                                        <div class="underline">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>ポジション</td>
+                                    <td>
+                                        <select id="select" name="posi">
+                                            <option>DJ</option>
+                                            <option>Bar</option>
+                                            <option>照明</option>
+                                            <option>デザイナー</option>
+                                            <option>自分は型にはまらない</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <!-- <div>
+                                    <p>好きなアーティスト5人あげてください。</p>
+                                    <input type="textare" name="favo_art">
+                                    <input type="textare" name="favo_art2">
+                                    <input type="textare" name="favo_art3">
+                                    <input type="textare" name="favo_art4">
+                                    <input type="textare" name="favo_art5">
+                                </div>
+                                <div>
+                                    <p>好きなDJ3人あげてください。</p>
+                                    <input type="textare" name="favo_DJ">
+                                    <input type="textare" name="favo_DJ2">
+                                    <input type="textare" name="favo_DJ3">
+                                </div> -->
+                                <tr>
+                                    <td>ご質問等</td>
+                                    <td class="form_text">
+                                    <textarea class="inputcome" placeholder="何かあれば" name="question" id="" cols="30" rows="10"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <div class="underlinecome"></div>
+                                        <button class="中央から外 bgcenterout 送信">送信</button>
+                                    </td>
+                                </tr>
+                            </form>
                         </table>
                     </div>
                 </div>
+        
         </div>
     </div>
 
