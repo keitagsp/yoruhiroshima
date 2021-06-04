@@ -94,13 +94,15 @@
             flex-direction: column;
         }
 
-        select{
-            margin-right: 300px;
-            margin-bottom: 50px;
-            font-size: 10px;
+        a {
+            list-style: none;
+        }
 
-        } 
-        
+        select {
+            margin-right: 170px;
+            margin-bottom: 100px;
+        }
+
         .contact_form {
             display: flex;
             justify-content: center;
@@ -127,7 +129,7 @@
 
         .送信 {
             margin-top: 100px;
-            padding: 5px 40px 5px 40px;
+            padding: 10px 50px 10px 50px;
             border: 1px solid grey;
             border-radius: 40px;
             background-color: grey;
@@ -167,11 +169,11 @@
     </div>
     <div class="main">
         <form action="recordbag_create.php" method="post">
-            <a href="recordbag_read.php">一覧画面</a>
+
             <div class="contact_form">
                 <table class="contact_form_table">
                     <tr>
-                        
+                        <td class="select">
                             <select name="nname">
                                 <option>keita</option>
                                 <option>はっしー(小4)</option>
@@ -179,16 +181,21 @@
                                 <option>さやパス</option>
                                 <option>たろ様</option>
                             </select>
-                        
+                        </td>
+                        <td>
+                            <a href="recordbag_read.php">List</a>
+                        </td>
                     </tr>
+                </table>
+                <table class="contact_form_table">
                     <tr>
-                        <td>TITLE</td>
+                        <td>Title</td>
                         <td class="form_text">
                             <input class="input" type="text" name="title">
                         </td>
                     </tr>
                     <tr>
-                        <td>ARTIST</td>
+                        <td>Artist</td>
                         <td class="form_text">
                             <input class="input" type="text" name="artist">
                         </td>
