@@ -1,42 +1,42 @@
 <?php
 
-// DB接続情報
-$dbn = 'mysql:dbname=gsacf_l05_08;charset=utf8;port=3306;host=localhost';
-$user = 'root';
-$pwd = '';
 
-// DB接続
-try {
-    $pdo = new PDO($dbn, $user, $pwd);
-} catch (PDOException $e) {
-    echo json_encode(["db error" => "{$e->getMessage()}"]);
-    exit();
-}
+include('functions.php');
+$pdo = connect_to_db();
+
 
 $sql = 'SELECT * FROM recordbag';
 
 $stmt = $pdo->prepare($sql);
 $status = $stmt->execute();
 
-
-
 if ($status == false) {
-    $error = $stmt->errorInfo();  // データ登録失敗次にエラーを表示
-    exit('sqlError:' . $error[2]);
+    $error = $stmt->errorInfo();
+    echo json_encode(["error_msg" => "{$error[2]}"]);
+    exit();
 } else {
-    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);  // データの出力用変数（初期値は空文字）を設定
     $output = "";
     foreach ($result as $record) {
         $output .= "<tr>";
         $output .= "<td>{$record["nname"]}</td>";
         $output .= "<td>{$record["title"]}</td>";
         $output .= "<td>{$record["artist"]}</td>";
+        // edit deleteリンクを追加
+        $output .= "<td>
+    <a href='recordbag_edit.php?id={$record["id"]}'>edit</a>
+    </td>";
+        $output .= "<td>
+    <a href='recordbag_delete.php?id={$record["id"]}'>delete</a>
+    </td>";
         $output .= "</tr>";
     }
+
+    // $recordの参照を解除する．解除しないと，再度foreachした場合に最初からループしない
+    // 今回は以降foreachしないので影響なし
+    unset($record);
 }
-
 ?>
-
 <!DOCTYPE html>
 <html lang="ja">
 

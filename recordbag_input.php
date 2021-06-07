@@ -180,6 +180,8 @@
                                 <option>ひげの波動拳</option>
                                 <option>さやパス</option>
                                 <option>たろ様</option>
+                                <option>あべちゃん</option>
+                                <option>わかまつさん</option>
                             </select>
                         </td>
                         <td>
