@@ -1,18 +1,18 @@
 <?php
 
-$todo = $_POST['todo'];
-$deadline = $_POST['deadline'];
+$title = $_POST['title'];
+$artist = $_POST['artist'];
 $id = $_POST['id'];
 
 include('functions.php');
 $pdo = connect_to_db();
 
 
-$sql = 'UPDATE todo_table SET todo=:todo, deadline=:deadline, update_at=sysdate() WHERE id=id';
+$sql = 'UPDATE recordbag SET title=:title, artist=:artist, update_at=sysdate() WHERE id=id';
 
 $stmt = $pdo->prepare($sql);
-$stmt->bindValue(':todo', $todo, PDO::PARAM_STR);
-$stmt->bindValue(':deadline', $deadline, PDO::PARAM_STR);
+$stmt->bindValue(':title', $title, PDO::PARAM_STR);
+$stmt->bindValue(':artist', $artist, PDO::PARAM_STR);
 $stmt->bindValue(':id', $id, PDO::PARAM_STR);
 $status = $stmt->execute();
 
@@ -22,7 +22,7 @@ if ($status == false) {
     exit();
 } else {
     // $record = $stmt->fetch(PDO::FETCH_ASSOC);
-    header("Location:todo_read.php");
+    header("Location:recordbag_read.php");
     exit();
 }
 
