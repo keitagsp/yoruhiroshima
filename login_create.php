@@ -28,7 +28,7 @@ try {
 }
 
 $sql =
-'INSERT INTO login(id, acount, password, is_admin, is_deleted, created_at, updated_at) VALUES(NULL, :acount, :password,0,0, sysdate(), sysdate())';
+'INSERT INTO users_table(id, acount, password, is_admin, is_deleted, created_at, updated_at) VALUES(NULL, :acount, :password,0,0, sysdate(), sysdate())';
 
 
 $stmt = $pdo->prepare($sql);
