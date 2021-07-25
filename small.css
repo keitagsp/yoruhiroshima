@@ -608,61 +608,6 @@ template {
 リセットーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 */
 
-/* 
-URW DIN Thin
-
-font-family: urw-din, sans-serif;
-font-weight: 100;
-font-style: normal;
-
-URW DIN XLight
-
-font-family: urw-din, sans-serif;
-font-weight: 200;
-font-style: normal;
-
-URW DIN Light
-
-font-family: urw-din, sans-serif;
-font-weight: 300;
-font-style: normal;
-
-URW DIN Regular
-
-font-family: urw-din, sans-serif;
-font-weight: 400;
-font-style: normal;
-
-URW DIN Medium
-
-font-family: urw-din, sans-serif;
-font-weight: 500;
-font-style: normal;
-
-URW DIN Demi
-
-font-family: urw-din, sans-serif;
-font-weight: 600;
-font-style: normal;
-
-URW DIN Bold
-
-font-family: urw-din, sans-serif;
-font-weight: 700;
-font-style: normal;
-
-URW DIN Black
-
-font-family: urw-din, sans-serif;
-font-weight: 900;
-font-style: normal;
-
-font-family: urw-din, sans-serif;
-font-weight: 500;
-font-style: italic;
- */
-
-
 
 html{
     height: 100%;
@@ -679,9 +624,9 @@ body{
 
 
 .wrapper{
-width: 100%;
-display: flex;
-flex-direction: column;
+    margin: 0 5% ;
+    width: 90%;
+    height: 100%;
 }
 
 a {
@@ -689,117 +634,119 @@ a {
     color: white;
 }
 
-.header{
-    width: 100%;
-    height: 120px;
-    display: flex;
-    align-items: center;
-    color:white;
-    font-size: 1.1vw;
-    position: fixed;
-
-}
 
 .minitsuki{
     margin-left: 3%;
 }
 
 .minitsuki img{
-  width: 10%;
+    width: 100%;
+    display: none;
 }
 
-
 .header .btn-gNav{
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 30px;
-  height: 24px;
-  z-index: 3;
-  box-sizing: border-box;
-  cursor: pointer;
-  -webkit-transition: all 400ms;
-  transition: all 400ms;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 24px;
+    z-index: 3;
+    box-sizing: border-box;
+    cursor: pointer;
+    -webkit-transition: all 400ms;
+    transition: all 400ms;
 }
 
 .header .btn-gNav span{
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  background: rgb(255, 255, 255);
-  border-radius: 10px;
-  -webkit-transition: all 400ms;
-  transition: all 400ms;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.863);
+    border-radius: 10px;
+    -webkit-transition: all 400ms;
+    transition: all 400ms;
 }
+
 .header .btn-gNav span:nth-child(1) {
-  top:0;
+    top:0;
 }
+
 .header .btn-gNav span:nth-child(2) {
-  top:10px;
+    top:10px;
 }
-.header .btn-gNav span:nth-child(3) {
-  top:20px;
-}
+
 .header .btn-gNav.open span:nth-child(1){
-  background: #fff;
-  top: 6px;
-  -webkit-transform: rotate(-45deg);
-  -moz-transform   : rotate(-45deg);
-  transform        : rotate(-45deg);
+    background: #fff;
+    top: 6px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform   : rotate(-45deg);
+    transform        : rotate(-45deg);
 }
+
 .header .btn-gNav.open span:nth-child(2),.header .btn-gNav.open span:nth-child(3){
-  top: 6px;
-  background :#fff;
-  -webkit-transform: rotate(45deg);
-  -moz-transform   : rotate(45deg);
-  transform        : rotate(45deg);
+    top: 6px;
+    background :#fff;
+    -webkit-transform: rotate(45deg);
+    -moz-transform   : rotate(45deg);
+    transform        : rotate(45deg);
 }
+
 .header_text{
-  position: fixed;
-  top: 0;
-  right: -100%;
-  font-size: 16px;
-  /* box-sizing: border-box; */
-  z-index: 2;
-  transition: .3s;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    font-size: 16px;
+    /* box-sizing: border-box; */
+    z-index: 2;
+    transition: .3s;
 }
+
 .header_text.open{
-  right: 0px;
-  background-color: rgb(175, 175, 175);
-  width: 100%;
+    right: 0px;
+    background-color: rgb(175, 175, 175);
+    width: 100%;
+    height: 100vh;
 }
+
 .header_text .gnavi{
-  margin-top: 30px;
-  width: 100%;
-  height:100%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
+    width: 100%;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
 }
+
 .header_text .gnavi li{
-  display: block;
-  padding : 20px 30px;
+    display: block;
+    padding : 20px 30px;
 }
+
 .header_text .gnavi li a{
-  color: rgb(255, 255, 255);
-  text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 
 
 @media screen and (min-width: 600px){
 
+.minitsuki img{
+    width: 100%;
+    display: block;
+}
 
-  .btn-gNav{
+.btn-gNav{
     display: none;
-  }
-  .header_text{
+}
+
+.header_text{
     position: fixed;
     top: 0;
     right: 0;
     height: 50px;
-  }
-  .header_text .gnavi{
+}
+
+.header_text .gnavi{
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -807,16 +754,15 @@ a {
     top: 0;
     right: 0;
     padding-left: 50px;
-  }
-  .header_text .gnavi li{
-    padding-top: 5px;
-  }
-
-  .tsuki{
-    display: none;
-  }
-
 }
+
+.header_text .gnavi li{
+    padding-top: 5px;
+}
+
+.tsuki{
+    display: none;
+}}
 
 .gnavi li a{
     display: block;
@@ -869,45 +815,46 @@ a {
 }
 
 @keyframes flash {
-  0%,100% {
+0%,100% {
     opacity: 1;
-  }
-
-  50% {
+}
+    50% {
     opacity: 0;
-  }
+}
 }
 
 
 
 .Top{
-  display: flex;
-  padding-top: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .rogo{
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
 }
+
+.rogokana{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .tsuki{
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: none;
 }
 
-.rogo img{
-    width: 40%;
+.rogokana img{
+    width: 55%;
 }
-
-.tsuki img{
-    width: 80%;
-    padding-right: 5%;
-}
-
 
 .btnlinestretches1{
     /*線の基点とするためrelativeを指定*/
@@ -916,10 +863,7 @@ a {
     display:inline-block;
     text-decoration: none;
     outline: none;
-    font-size: 3vh;
-    margin-top: 550px;
-    margin-bottom: 100px;
-    padding-bottom: 8px;
+    font-size: 2vh;
     display: flex;
     justify-content: center;
 }
@@ -929,11 +873,11 @@ a {
     content: "";
     /*絶対配置で線の位置を決める*/
     position: absolute;
-    bottom: 0;
+    bottom: -10px;
     /*線の形状*/
     width: 100%;
     height: 1px;
-    background: white;
+    background: rgba(255, 255, 255, 0.5);
 }
 
 
@@ -959,9 +903,15 @@ a {
     100%{left:30%;opacity:0}
 }
 
-
 .pickup{
-  margin: 0 5%;
+}
+
+.btnlinestretches1{
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.74);
+    margin-bottom: 50px;
 }
 
 .horizontal_list{
@@ -971,14 +921,13 @@ a {
 }
 
 .Party{
-    width: 20%;
-    margin: 6%;
-
+    width: 28%;
+    margin: 5% 10%;
 }
 
 .datetime{
-  font-weight: 400;
-    font-size: 20px;
+    font-weight: 400;
+    font-size: 14px;
     color: rgba(255, 255, 255, 0.74);
     padding-bottom: 2%;
 }
@@ -994,7 +943,7 @@ a {
 }
 
 .date p{
-  font-size: 16px;
+  font-size: 11px;
   color: rgba(255, 255, 255, 0.74);
   padding-top: 2%;
 }
@@ -1007,6 +956,8 @@ a {
 
 .dj{
 }
+
+
 
 .wanted_text{
     font-size: 18px;

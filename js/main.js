@@ -1,5 +1,5 @@
-'usestrict';
 
+'usestrict';
 {
 const hidden_news = document.getElementById('hidden_news');
 const btn = document.getElementById('btn');
