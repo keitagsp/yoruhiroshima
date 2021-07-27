@@ -1,4 +1,3 @@
-
 'usestrict';
 {
 const hidden_news = document.getElementById('hidden_news');

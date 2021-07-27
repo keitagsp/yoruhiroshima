@@ -10,10 +10,10 @@
 
 <!-- jquery--------------------------------------------------------------------------------------------------- -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="slick-1.8.1/slick/slick.min.js"></script>
 
 <!-- フォント--------------------------------------------------------------------------------------------------- -->
-
 
     <link rel="stylesheet" href="https://use.typekit.net/opa4ojb.css">
     
@@ -21,6 +21,9 @@
 
     <link rel="stylesheet" href="main.css" media="screen and (min-width:600px)">
     <link rel="stylesheet" href="small.css" media="screen and (max-width:600px)">
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css">
+
 
     <title>yoru</title>
 
@@ -135,12 +138,57 @@
                             </div>
                                                 
                         </div>
+                        <div class="Party">
+                            <div class="datetime">
+                                <p>06.19.SAT</p>
+                            </div>
+                            <div class="flyer">
+                                <img src="0619cloud9.jpg" alt="">
+                            </div>
+                            <div class="date">
+                                <p class="Party_title">CLOUD9</p>
+                        
+                                <div class="dj">
+                                    <p>KANI</p>
+                                </div>
+                            </div>
+                        
+                        </div><div class="Party">
+                            <div class="datetime">
+                                <p>7.10.SAT</p>
+                            </div>
+                            <div class="flyer">
+                                <img src="anniversary_image.jpg" alt="">
+                            </div>
+                            <div class="date">
+                                <p class="Party_title">28th ANNIVESARY PARTY</p>
+                        
+                                <div class="dj">
+                                    <p>YORU ALL DJ'S</p>
+                                </div>
+                            </div>
+                        
+                        </div>
                 </div>
+        </div>
+
+        <!-- <ul class="slider">
+            <li><img src="swet.jpg" ></li>
+            <li><img src="ondo.jpg" ></li>
+            <li><img src="nori.jpg" ></li>
+        </ul> -->
+
+        <div class="sliderArea">
+            <div class="regular_2 slider">
+                <div><img src="swet.jpg" alt=""></div>
+                <div><img src="ondo.jpg" alt=""></div>
+                <div><img src="nori.jpg" alt=""></div>
+            </div>
         </div>
         
         
         <!-- News -->
-        <!-- <div class="News">
+      <div class="News">
         
                     <div class="nori">
                         <a href=""><img src="nori.jpg" alt=""></a>
@@ -152,7 +200,6 @@
                         </div>
                     </div>
                     
-                    
                     <div class="swet">
                         <a href=""><img src="swet.jpg" alt=""></a>
                         <div class="swet_date">
@@ -162,7 +209,6 @@
                             <p>大好評のYoruスウェットにWhite/Greyが追加されました。数量限定ですのでお早めに！</p>
                         </div>
                     </div>
-        
         
                     <div class="umi">
                         <a href=""><img src="umi.jpg" alt=""></a>
@@ -175,7 +221,6 @@
         
                     </div>
         
-        
                     <div class="beer">
                         <a href=""><img src="miyajimabber.jpg" alt=""></a>
                         <div class="beer_date">
@@ -185,7 +230,6 @@
                             <p>宮島の地ビール三種を飲めます。お試しあれ。</p>
                         </div>
                     </div>
-        
         
                     <div class="ondo">
                         <a href=""><img src="ondo.jpg" alt=""></a>
@@ -197,7 +241,7 @@
                         </div>
                     </div>
         
-            </div> -->
+            </div>
         
         
         <!-- 求人 -->
@@ -270,9 +314,9 @@
                         </div>
                 
                 </div>
-            </div> -->
+            </div>
         
-        
+         -->
         
         <!-- アクセス -->
         <!-- <div class="access">
@@ -304,8 +348,8 @@
                         </div>
                     </div>
                 </div>      
-            </div> -->
-        
+            </div>
+         -->
         
         
         <!-- <div class="Arts">
@@ -313,6 +357,8 @@
             </div> -->
 
 </div>
+
+
 
 <script>
     $(function () {
@@ -330,7 +376,22 @@
             $('.header_text').removeClass('open');
         });
     });
+
+    
+    $('.slider').slick();
+
+        $(document).on('ready', function () {
+            $(".regular_2").slick({
+                dots: true, // ドットインジケーターの表示
+                infinite: true, // スライドのループを有効にするか
+                slidesToShow: 2, // 表示するスライド数を設定
+                slidesToScroll: 1 // スクロールするスライド数を設定 
+            });
+        });
+
 </script>
+
+
 
     <script src="js/main.js"></script>
 </body>
