@@ -21,7 +21,8 @@
 
     <link rel="stylesheet" href="main.css" media="screen and (min-width:600px)">
     <link rel="stylesheet" href="small.css" media="screen and (max-width:600px)">
-    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css" media="screen and (min-width:600px)">
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/small-slick-theme.css" media="screen and (max-width:600px)">
     <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css">
 
 
@@ -172,23 +173,30 @@
                 </div>
         </div>
 
-        <!-- <ul class="slider">
-            <li><img src="swet.jpg" ></li>
-            <li><img src="ondo.jpg" ></li>
-            <li><img src="nori.jpg" ></li>
-        </ul> -->
 
         <div class="sliderArea">
             <div class="regular_2 slider">
-                <div><img src="swet.jpg" alt=""></div>
-                <div><img src="ondo.jpg" alt=""></div>
-                <div><img src="nori.jpg" alt=""></div>
+                <div>
+                    <img src="swet.jpg" alt="">
+                    <p>2021/04/10</p>
+                    <p>大好評のYoruスウェットにWhite/Greyが追加されました。数量限定ですのでお早めに！</p>
+                </div>
+                <div>
+                    <img src="umi.jpg" alt="">
+                    <p>2021/04/01</p>
+                    <p>今年も守ヶ浦キャンプ場で夏フェスが決定しました！前売りチケット販売中です！</p>
+                </div>
+                <div>
+                    <img src="ondo.jpg" alt="">
+                    <p>2021/03/26</p>
+                    <p>ご近所さんのオンド食堂にアメリカよりJoeClluselが来日しますチェックしてみてください！</p>
+                </div>
             </div>
         </div>
         
         
         <!-- News -->
-      <div class="News">
+        <!-- <div class="News">
         
                     <div class="nori">
                         <a href=""><img src="nori.jpg" alt=""></a>
@@ -241,7 +249,7 @@
                         </div>
                     </div>
         
-            </div>
+            </div> -->
         
         
         <!-- 求人 -->
@@ -378,15 +386,12 @@
     });
 
     
-    $('.slider').slick();
 
-        $(document).on('ready', function () {
-            $(".regular_2").slick({
-                dots: true, // ドットインジケーターの表示
-                infinite: true, // スライドのループを有効にするか
-                slidesToShow: 2, // 表示するスライド数を設定
-                slidesToScroll: 1 // スクロールするスライド数を設定 
-            });
+        $('.slider').slick({
+            dots: true, //スライドしたのドット
+            arrows: false,//左右の矢印
+            infinite: true,//スライドのループ
+            pauseOnHover: false,//ホバーしたときにスライドを一時停止しない
         });
 
 </script>
