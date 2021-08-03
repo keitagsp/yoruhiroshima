@@ -608,125 +608,215 @@ template {
 リセットーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 */
 
+/* 
+URW DIN Thin
+
+font-family: urw-din, sans-serif;
+font-weight: 100;
+font-style: normal;
+
+URW DIN XLight
+
+font-family: urw-din, sans-serif;
+font-weight: 200;
+font-style: normal;
+
+URW DIN Light
+
+font-family: urw-din, sans-serif;
+font-weight: 300;
+font-style: normal;
+
+URW DIN Regular
+
+font-family: urw-din, sans-serif;
+font-weight: 400;
+font-style: normal;
+
+URW DIN Medium
+
+font-family: urw-din, sans-serif;
+font-weight: 500;
+font-style: normal;
+
+URW DIN Demi
+
+font-family: urw-din, sans-serif;
+font-weight: 600;
+font-style: normal;
+
+URW DIN Bold
+
+font-family: urw-din, sans-serif;
+font-weight: 700;
+font-style: normal;
+
+URW DIN Black
+
+font-family: urw-din, sans-serif;
+font-weight: 900;
+font-style: normal;
+
+font-family: urw-din, sans-serif;
+font-weight: 500;
+font-style: italic;
+ */
+
+
 
 html{
     height: 100%;
 }
 
 body{
-  font-family: YakuHanJP, "Hiragino Sans", sans-serif;
-  background-color: rgb(1, 15, 19);
-  font-weight: 100;
-  height: 100%;
+    font-family: urw-din, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    background-color: rgb(1, 15, 19);
+    font-weight: 100;
+    height: 100%;
 }
 
+
+.wrapper{
+width: 100%;
+display: flex;
+flex-direction: column;
+}
 
 a {
     text-decoration:none; 
     color: white;
 }
 
-.wrapper{
-    margin: 0 5% ;
-    width: 90%;
-    height: 100%;
-}
+.header{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    color:white;
+    font-size: 1.1vw;
+    position: fixed;
 
+}
 
 .minitsuki{
     margin-left: 3%;
 }
 
 .minitsuki img{
-    width: 100%;
-    display: none;
+  width: 10%;
 }
 
+
 .header .btn-gNav{
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 30px;
-    height: 24px;
-    z-index: 3;
-    box-sizing: border-box;
-    cursor: pointer;
-    -webkit-transition: all 400ms;
-    transition: all 400ms;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 24px;
+  z-index: 3;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
 }
 
 .header .btn-gNav span{
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background: rgba(255, 255, 255, 0.863);
-    border-radius: 10px;
-    -webkit-transition: all 400ms;
-    transition: all 400ms;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
 }
-
 .header .btn-gNav span:nth-child(1) {
-    top:0;
+  top:0;
 }
-
 .header .btn-gNav span:nth-child(2) {
-    top:10px;
+  top:10px;
 }
-
+.header .btn-gNav span:nth-child(3) {
+  top:20px;
+}
 .header .btn-gNav.open span:nth-child(1){
-    background: #fff;
-    top: 6px;
-    -webkit-transform: rotate(-45deg);
-    -moz-transform   : rotate(-45deg);
-    transform        : rotate(-45deg);
+  background: #fff;
+  top: 6px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform   : rotate(-45deg);
+  transform        : rotate(-45deg);
 }
-
 .header .btn-gNav.open span:nth-child(2),.header .btn-gNav.open span:nth-child(3){
-    top: 6px;
-    background :#fff;
-    -webkit-transform: rotate(45deg);
-    -moz-transform   : rotate(45deg);
-    transform        : rotate(45deg);
+  top: 6px;
+  background :#fff;
+  -webkit-transform: rotate(45deg);
+  -moz-transform   : rotate(45deg);
+  transform        : rotate(45deg);
+}
+.header_text{
+  position: fixed;
+  top: 0;
+  right: -100%;
+  font-size: 16px;
+  /* box-sizing: border-box; */
+  z-index: 2;
+  transition: .3s;
+}
+.header_text.open{
+  right: 0px;
+  background-color: rgb(175, 175, 175);
+  width: 100%;
+}
+.header_text .gnavi{
+  margin-top: 30px;
+  width: 100%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+.header_text .gnavi li{
+  display: block;
+  padding : 20px 30px;
+}
+.header_text .gnavi li a{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
 }
 
-.header_text{
+
+@media screen and (min-width: 600px){
+
+
+  .btn-gNav{
+    display: none;
+  }
+  .header_text{
     position: fixed;
     top: 0;
-    right: -100%;
-    font-family: urw-din;
-    font-style: normal;
-    font-size: 16px;
-    /* box-sizing: border-box; */
-    z-index: 2;
-    transition: .3s;
-}
-
-.header_text.open{
-    right: 0px;
-    background-color: rgb(175, 175, 175);
-    width: 100%;
-    height: 100vh;
-}
-
-.header_text .gnavi{
-    width: 100%;
-    height:100vh;
+    right: 0;
+    height: 50px;
+  }
+  .header_text .gnavi{
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-}
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    padding-left: 50px;
+  }
+  .header_text .gnavi li{
+    padding-top: 5px;
+  }
 
-.header_text .gnavi li{
-    display: block;
-    padding : 20px 30px;
-}
+  .tsuki{
+    display: none;
+  }
 
-.header_text .gnavi li a{
-    color: rgb(255, 255, 255);
-    text-decoration: none;
 }
-
 
 .gnavi li a{
     display: block;
@@ -779,77 +869,79 @@ a {
 }
 
 @keyframes flash {
-0%,100% {
+  0%,100% {
     opacity: 1;
-}
-    50% {
+  }
+
+  50% {
     opacity: 0;
-}
+  }
 }
 
 
 
 .Top{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  padding-top: 180px;
 }
 
 .rogo{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: none;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.rogokana{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 
 .tsuki{
-    display: none;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.rogokana img{
-    width: 55%;
+.rogo img{
+    width: 40%;
 }
 
-.border_anime{
+.tsuki img{
+    width: 80%;
+    padding-right: 5%;
+}
+
+
+.btnlinestretches1{
     /*線の基点とするためrelativeを指定*/
     position:relative;
     color: white;
     display:inline-block;
     text-decoration: none;
     outline: none;
-    font-size: 2vh;
+    font-size: 3vh;
+    margin-top: 550px;
+    margin-bottom: 100px;
+    padding-bottom: 8px;
     display: flex;
     justify-content: center;
 }
 
 /*線の設定*/
-.border_anime::before {
+.btnlinestretches1::before {
     content: "";
     /*絶対配置で線の位置を決める*/
     position: absolute;
-    bottom: -10px;
+    bottom: 0;
     /*線の形状*/
     width: 100%;
     height: 1px;
-    background: rgba(255, 255, 255, 0.5);
+    background: white;
 }
 
 
 /*線と矢印を繰り返しアニメーション*/
-.border_anime::before {
+.btnlinestretches1::before {
     animation: arrowlong01 2s ease infinite;
 }
-.border_anime::after {
+.btnlinestretches1::after {
     animation: arrowlong02 2s ease infinite;
 }
 
@@ -867,20 +959,10 @@ a {
     100%{left:30%;opacity:0}
 }
 
-.border_anime{
-    display: flex;
-    justify-content: center;
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.74);
-    margin-bottom: 30px;
-}
 
-.pickup{    
-  font-family: urw-din;
-  font-style: normal;
-  letter-spacing: 0.2em;
+.pickup{
+  margin: 0 5%;
 }
-
 
 .horizontal_list{
     display: flex;
@@ -889,13 +971,14 @@ a {
 }
 
 .Party{
-    width: 43%;
-    margin: 5% 2%;
+    width: 20%;
+    margin: 6%;
+
 }
 
 .datetime{
-    font-weight: 400;
-    font-size: 14px;
+  font-weight: 400;
+    font-size: 20px;
     color: rgba(255, 255, 255, 0.74);
     padding-bottom: 2%;
 }
@@ -911,9 +994,9 @@ a {
 }
 
 .date p{
-    font-size: 11px;
-    color: rgba(255, 255, 255, 0.74);
-    padding-top: 2%;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.74);
+  padding-top: 2%;
 }
 
 .Party_title{
@@ -925,42 +1008,407 @@ a {
 .dj{
 }
 
+.wanted_text{
+    font-size: 18px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
-#news_text{
-  font-family: urw-din;
-  font-style: normal;
-  margin-top: 200px;
-  letter-spacing: 0.2em;
+.News_box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.News{
+    display: flex;
+	justify-content: space-evenly;
+    color: white;
+    margin-top: 130px;
+    margin-bottom: 200px;
+	width: 100%;
+}
+
+.nori_date{
+    font-size: 22px;
+    font-weight: bold;
+	margin-top: 32px;
+	margin-bottom: 24px;
+}
+
+.nori{
+	width: 15%;
+	justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nori img{
+	width: 100%;
+}
+
+.swet_date{
+    font-size: 22px;
+    font-weight: bold;
+	margin-top: 32px;
+	margin-bottom: 24px;
+}
+
+.swet{
+	width: 15%;
+	justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.swet img{
+	width: 100%;
+}
+
+.umi_date{
+    font-size: 22px;
+    font-weight: bold;
+	margin-top: 32px;
+	margin-bottom: 24px;
+}
+
+.umi{
+	width: 15%;
+	justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.umi img{
+	width: 100%;
+}
+
+.beer_date{
+    font-size: 22px;
+    font-weight: bold;
+	margin-top: 32px;
+	margin-bottom: 24px;
+}
+
+.beer{
+	width: 15%;
+	justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.beer img{
+	width: 100%;
+}
+
+.ondo_date{
+    font-size: 22px;
+    font-weight: bold;
+	margin-top: 32px;
+	margin-bottom: 24px;
+}
+
+.ondo{
+	width: 15%;
+	justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ondo img{
+	width: 100%;
+}
+
+
+
+.wanted_text_title{
+    margin-top: 300px;
+    margin-bottom: 80px;
+    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.wanted_text_text{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.speak{
+    margin-top: 100px;
+    margin-bottom: 200px;
+    padding: 10px 80px 10px 80px;
+    border: 1px solid grey;
+    border-radius: 40px;
+    background-color: grey;
+    color: black;
+    animation: flash 1.5s linear infinite
+}
+
+
+
+
+
+/*== ボタン共通設定 */
+.中央から外{
+    /*アニメーションの起点とするためrelativeを指定*/
+    position: relative;
+	overflow: hidden;
+    /*ボタンの形状*/
+	text-decoration: none;
+	display: inline-block;
+   	border: 1px solid #555;/* ボーダーの色と太さ */
+    padding: 10px 30px;
+	text-align: center;
+    outline: none;
+    /*アニメーションの指定*/   
+    transition: ease .2s;
+}
+
+/*ボタン内spanの形状*/
+.中央から外 span {
+	position: relative;
+	z-index: 3;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
+	color:#333;
+}
+
+.中央から外:hover span{
+	color:#fff;
+}
+
+/*== 背景が流れる（中央から外） */
+
+.bgcenterout:before {
+	content: '';
+    /*絶対配置で位置を指定*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+    /*色や形状*/
+	/* background: #333; */
+	width: 100%;
+	height: 100%;
+    /*アニメーション*/
+	transition: transform .3s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+	transform: scale(0, 0);
+	transform-origin:center;
+}
+
+/*hoverした際の形状*/
+.bgcenterout:hover:before{
+	transform:scale(1, 1);
+}
+
+#select{
+background: white;
+}
+
+.contact_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input {
+width: 328px;
+height: 36px;
+font-size: 18px;
+color: white;
+border: none;
+outline: 0;
+border-bottom: 1px solid #d1d5db;
+}
+
+
+
+.inputcome{
+width: 328px;
+height: 300px;
+color: white;
+font-size: 18px;
+outline: 0;
+border: 1px solid #d1d5db;
+}
+
+.underline {
+width: 328px;
+height: 1px;
+background: skyBlue;
+transform-origin: center center;
+transform: scaleX(0);
+transition: transform 0.5s ease-out;
+}
+
+.input:focus::-webkit-input-placeholder {
+color: transparent;
+}
+
+.input:focus + .underline{
+transform: scaleX(1);
+}
+
+.underlinecome {
+width: 328px;
+height: 1px;
+padding-bottom: 2px;
+background: skyBlue;
+transform-origin: center center;
+transform: scaleX(0);
+transition: transform 0.5s ease-out;
+}
+
+.inputcome:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+
+.inputcome:focus + .underlinecome {
+    transform: scaleX(1);
+}
+
+
+.tr{
+margin-bottom: 80px;
+}
+
+.contact_form td{
+    color: white;
+    font-size: 18px;
+	padding-right: 120px;
+	padding-bottom: 24px;
+}
+
+
+
+.contact_form p{
+	margin-bottom: 24px;
+}
+
+.contact_form label{
+	font-size: 22px;
+    color: white;
+	vertical-align: middle;
+}
+
+.position_remake {
+	text-align: left;
+	vertical-align: top;
+}
+
+.送信{
+    padding: 10px 80px 10px 80px;
+    border: 1px solid grey;
+    border-radius: 40px;
+    background-color: grey;
+    color: black;
+}
+
+
+.access{
+    margin-top: 100px;
+	margin-bottom: 64px;
+	display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.学校詳細{
+	padding-top: 64px;
+	padding-bottom: 80px;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.access_text{
+	font-size: 30px;
+	padding-bottom: 24px;
+}
+
+.ACCESS{
+	padding-top: 64px;
+}
+
+.gmap iframe {
+position: absolute;
+left: 0;
+top: 0;
 
 }
+
+
+.店舗詳細{
+    margin-top: 100px;
+    display: flex;
+	justify-content: center;
+    align-items: center;
+}
+
+.事務所所在地{
+	padding-top: 24px;
+	padding-bottom: 24px;
+}
+
+.FAX{
+	padding-top: 24px;
+	padding-bottom: 24px;
+}
+
+.福岡県{
+	padding-top: 24px;
+	padding-bottom: 24px;
+}
+
+.チーズアカデミーFUKUOKA{
+	margin-left: 48px;
+}
+
+.FAX{
+	padding-top: 24px;
+	padding-bottom: 24px;
+}
+
+.hidden_news{
+    display: none;
+}
+
+.Arts{
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    height: 50px;
+    width: 100%;
+    background-color: rgb(26, 25, 25);
+    color: white;
+}
+
+
+
+
+
+
+
+
 
 .sliderArea {
   max-width: 100%;
+  margin: 0 auto;
   padding: 0 25px;
-  color: #fff;
 }
-
-.sliderArea_text{
-  font-weight: 100;
-  font-style: normal;
-  font-size: 12px;
-  letter-spacing: 0.2em;
-  line-height: 1.5em;
-  padding-top: 10px;
-}
-
-.sliderArea_text_date{
-  color: rgba(255, 255, 255, 0.616);
-  font-weight: 100;
-  font-style: normal;
-  font-size: 10px;
-  padding-top: 8px;
-}
-
 .sliderArea.w300 {
   max-width: 300px;
 }
-
 .slick-slide {
   margin: 0 5px;
 }
@@ -968,9 +1416,11 @@ a {
   width: 100%;
   height: auto;
 }
-
 .slick-prev, .slick-next {
   z-index: 1;
+}
+.slick-prev:before, .slick-next:before {
+  color: #000;
 }
 .slick-slide {
   transition: all ease-in-out .3s;
@@ -991,88 +1441,3 @@ a {
 .thumb .slick-slide:hover {
   opacity: .7;
 }
-
-
-
-.wanted_text{
-    font-size: 12px;
-    color: white;
-    text-align: center;
-    letter-spacing: 0.2em;
-    line-height: 1.5em;
-}
-
-.wanted_text_title{
-    font-family: urw-din;
-    font-style: normal;
-    margin-top: 200px;
-    letter-spacing: 0.2em;
-    margin-bottom: 50px;
-    width: 100%;
-}
-
-.contact{
-  margin-top: 100px;
-}
-
-.contact_button{
-  font-family: urw-din;
-  font-style: normal;
-  letter-spacing: 0.2em;
-  padding: 20px 130px;
-  border-radius: 2px;
-  background: linear-gradient(90deg, rgb(44, 44, 44),rgb(34, 34, 34),rgb(44, 44, 44),rgb(34, 34, 34));
-  background-size: 200% 200%;
-  animation: gradient 5s ease infinite;
-}
-
-@keyframes gradient {
-0% {
-background-position: 0% 50%
-}
-50% {
-background-position: 100% 50%
-}
-100% {
-background-position: 0% 50%
-}
-}
-
-
-.access{
-    font-size: 12px;
-    color: white;
-    text-align: center;
-    letter-spacing: 0.2em;
-    line-height: 1.5em;
-}
-
-
-.hidden_news{
-    display: none;
-}
-
-.Arts{
-    font-family: urw-din;
-    font-style: normal;
-    letter-spacing: 0.1em;
-    font-size: 6px;
-    border-top: solid 1px rgba(255, 255, 255, 0.507);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 200px;
-    padding: -30px 0;
-    height: 40px;
-    width: 100%;
-    color: white;
-}
-
-
-
-
-
-
-
-
-

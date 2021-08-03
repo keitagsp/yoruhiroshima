@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- jquery--------------------------------------------------------------------------------------------------- -->
+
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="slick-1.8.1/slick/slick.min.js"></script>
+
+<!-- フォント--------------------------------------------------------------------------------------------------- -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.2.0/dist/css/yakuhanjp.min.css">
+    <link rel="stylesheet" href="https://use.typekit.net/opa4ojb.css">
+    <link rel="stylesheet" href="contact_form.css" media="screen and (min-width:600px)">
+    <link rel="stylesheet" href="contact_form_small.css" media="screen and (max-width:600px)">
+
+    <title>CONTACT</title>
+</head>
+
+
+<body>
+
+    <!-- ヘッダー -->
+    <div class="header">
+        <div class="minitsuki">
+            <a href="index.html"><img src="tsukikuro.png" alt=""></a>
+        </div>
+        <div class="btn-gNav">
+            <span></span>
+            <span></span>
+        </div>
+        <div class="header_text">
+            <ul class="gnavi">
+                    <li><a href="index.html">HOME</a></li>
+                <li><a href="#">CALENDER</a></li>
+                <li><a href="#">GOODS</a></li>
+                <li><a href="recordbag_input.php">RECORD BAG</a></li>
+                <li><a href="#">ACCESS</a></li>
+                <li><a href="login_input.php">LOGIN</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="form_parent">
+            <form action="create.php" method="POST">
+
+                <div class="border_anime">
+                    <p>CONTACT</p>
+                </div>
+
+                <div class="form_group">
+                    <p class="item_label">名前</p>
+                    <p class="item_label_en">Your Name</p>
+                </div>
+                    <input class="input" type="text" name="name">
+                
+
+                <div class="form_group">
+                    <p class="item_label">Mail</p>
+                    <p class="item_label_en">e-mail</p>
+                </div>
+                    <input class="input" type="e-mail"  name="email">
+                
+
+                <div class="form_group">
+                    <p class="item_label">したいこと</p>
+                    <p class="item_label_en">Your Skilled</p>
+                </div>
+                <div>
+                    <select id="select" name="posi">
+                        <option>DJ</option>
+                        <option>Bar</option>
+                        <option>Lighting</option>
+                        <option>Designer</option>
+                        <option>自分は型にはまらない</option>
+                    </select>
+                </div>
+                <div class="form_group">
+                    <p class="item_label">なにかあれば自由に書いて下さい</p>
+                </div>
+                    <textarea class="inputcome" name="question" id="" cols="30" rows="10">
+                    </textarea>            
+            </form>
+            <div>
+                <div class="underlinecome">
+                <a class="send">SEND</a>
+                </div>
+            </div>
+    </div>
+
+
+
+
+    <script>    $(function () {
+            $('.btn-gNav').on("click", function () {
+
+                $(this).toggleClass('open');
+                $('.header_text').toggleClass('open');
+            });
+
+        });
+
+        // メニューをクリックされたら、非表示にする
+        $(function () {
+            $('.gNav-menu li a').on("click", function () {
+                $('.header_text').removeClass('open');
+            });
+        });
+    </script>
+</body>
+
+</html>

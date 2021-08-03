@@ -663,6 +663,44 @@ font-style: italic;
  */
 
 
+/*
+Noto Sans CJK JP Thin
+
+font-family: noto-sans-cjk-jp, sans-serif;
+
+font-weight: 100;
+
+font-style: normal;
+
+Noto Sans CJK JP Light
+
+font-family: noto-sans-cjk-jp, sans-serif;
+
+font-weight: 300;
+
+font-style: normal;
+
+
+Noto Sans CJK JP DemiLight
+
+font-family: noto-sans-cjk-jp, sans-serif;
+
+font-weight: 300;
+
+font-style: normal;
+
+
+Noto Sans CJK JP Regular
+
+font-family: noto-sans-cjk-jp, sans-serif;
+
+font-weight: 400;
+
+font-style: normal;
+ */
+
+
+
 
 html{
     height: 100%;

@@ -15,9 +15,12 @@
 
 <!-- フォント--------------------------------------------------------------------------------------------------- -->
 
-    <link rel="stylesheet" href="https://use.typekit.net/opa4ojb.css">
     
-<!-- css--------------------------------------------------------------------------------------------------- -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.2.0/dist/css/yakuhanjp.min.css">
+
+    <link rel="stylesheet" href="https://use.typekit.net/opa4ojb.css">
+        
+    <!-- css--------------------------------------------------------------------------------------------------- -->
 
     <link rel="stylesheet" href="main.css" media="screen and (min-width:600px)">
     <link rel="stylesheet" href="small.css" media="screen and (max-width:600px)">
@@ -50,7 +53,7 @@
             </div>
             <div class="header_text">
                 <ul class="gnavi">
-                    <li><a href="#">HOME</a></li>
+                    <li><a href="index.html">HOME</a></li>
                     <li><a href="#">CALENDER</a></li>
                     <li><a href="#">GOODS</a></li>
                     <li><a href="recordbag_input.php">RECORD BAG</a></li>
@@ -69,9 +72,9 @@
             </div>
         
         
-        <!-- Recomenndition ! -->
+        <!-- pickup -->
         <div class="pickup">
-                <div class="btnlinestretches1">
+                <div class="border_anime">
                     <p>PICK UP</p>  
                 </div>
         
@@ -174,25 +177,31 @@
         </div>
 
 
+        <!-- News -->
+        <div class="border_anime" id="news_text" >
+            <p>NEWS</p>
+        </div>
+
         <div class="sliderArea">
             <div class="regular_2 slider">
                 <div>
                     <img src="swet.jpg" alt="">
-                    <p>2021/04/10</p>
-                    <p>大好評のYoruスウェットにWhite/Greyが追加されました。数量限定ですのでお早めに！</p>
+                    <p class="sliderArea_text">大好評のYoruスウェットに<br>White/Greyが追加されました。<br>数量限定ですのでお早めに！</p>
+                    <p class="sliderArea_text_date">2021.04.10</p>
                 </div>
                 <div>
                     <img src="umi.jpg" alt="">
-                    <p>2021/04/01</p>
-                    <p>今年も守ヶ浦キャンプ場で夏フェスが決定しました！前売りチケット販売中です！</p>
+                    <p class="sliderArea_text">今年も守ヶ浦キャンプ場で夏フェスが決定しました！<br>前売りチケット販売中です！</p>
+                    <p class="sliderArea_text_date">2021.04.01</p>
                 </div>
-                <div>
+                <div >
                     <img src="ondo.jpg" alt="">
-                    <p>2021/03/26</p>
-                    <p>ご近所さんのオンド食堂にアメリカよりJoeClluselが来日しますチェックしてみてください！</p>
+                    <p class="sliderArea_text">ご近所さんのオンド食堂にアメリカよりJoeClluselが来日します。<br>チェックしてみてください！</p>
+                    <p class="sliderArea_text_date">2021.03.26</p>
                 </div>
             </div>
         </div>
+
         
         
         <!-- News -->
@@ -253,116 +262,42 @@
         
         
         <!-- 求人 -->
-        <!-- <div class="wanted">
+        <div class="wanted">
                 <div class="wanted_text">
-                    <p class="wanted_text_title btnlinestretches1">Wanted !</p>
-                    <p>音楽を一緒に共有する場所として、常に高みを目指す。</p>
-                    <p class="wanted_text_text">僕たちはこのビジョンに共感できる仲間を探しています。</p>
-                    <p>DJ、Bar、照明、デザイナーを探していますが</p>
-                    <p class="wanted_text_text">その他にも自分はこんなことができるっていうのがあれば大歓迎です。</p>
-                    <p>まずはお酒でものみながら、話してみませんか？</p>
-                        <div class="abe">
-                            <button id="btn">
-                                <p class="中央から外 bgcenterout speak"><span>話してみる</span></p>
-                            </button>
-                        </div>
-        
-                        <div class="hidden_news" id="hidden_news">
-                            <div class="contact_form">
-                                <table class="contact_form_table">
-                                    <form action="create.php" method="POST">
-                                        <tr>
-                                            <td>名前</td>
-                                            <td class="form_text">
-                                                <input class="input" type="text" placeholder="名前" name="name">
-                                                <div class="underline">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>かな</td>
-                                            <td class="form_text">
-                                                <input class="input" type="text" placeholder="かな" name="kana">
-                                                <div class="underline">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>メールアドレス</td>
-                                            <td class="form_text">
-                                                <input class="input" type="e-mail" placeholder="メールアドレス" name="email">
-                                                <div class="underline">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>ポジション</td>
-                                            <td>
-                                                <select id="select" name="posi">
-                                                    <option>DJ</option>
-                                                    <option>Bar</option>
-                                                    <option>照明</option>
-                                                    <option>デザイナー</option>
-                                                    <option>自分は型にはまらない</option>
-                                                </select>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>ご質問等</td>
-                                            <td class="form_text">
-                                            <textarea class="inputcome" placeholder="何かあれば" name="question" id="" cols="30" rows="10"></textarea></td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td>
-                                                <div class="underlinecome"></div>
-                                                <button class="中央から外 bgcenterout 送信">送信</button>
-                                            </td>
-                                        </tr>
-                                    </form>
-                                </table>
-                            </div>
-                        </div>
-                
+                    <p class="wanted_text_title border_anime">WANTED</p>
+                    <p class="wanted_text_text">
+                    " 音楽を一緒に共有する場所として、常に高みを目指す "<br><br><br>
+                    僕たちはこのビジョンに共感できる仲間を探しています。<br><br>
+                    DJ、Bar、Lighting、デザイナーを探していますが<br>
+                    自分はこんなことができるっていうのも大歓迎です。<br><br><br>
+                    まずはお酒でものみながら、話してみませんか？
+                    </p>
+                    <div class="contact">
+                    <a class="contact_button" href="contact_form.html" target="_blank" rel="noopener noreferrer"><span>CONTACT</span></a>
+                    </div>    
                 </div>
-            </div>
+        </div>
         
-         -->
+        
         
         <!-- アクセス -->
-        <!-- <div class="access">
-                <div class="access_text">
-                    <h5 class="ACCESS">ACCESS</h5>
-                </div>
-                <p>店舗概要</p>
-        
-                <div class="学校詳細">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d491.12291828808276!2d132.46423357836633!3d34.39026726374481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355aa2050a24272b%3A0xc05adc2c08adda8e!2z44CSNzMwLTAwMjgg5bqD5bO255yM5bqD5bO25biC5Lit5Yy65rWB5bed55S677yU4oiS77yYIOadsemCpuODk-ODqw!5e0!3m2!1sja!2sjp!4v1619520371602!5m2!1sja!2sjp"
-                        width="1000" height="562" style="border:0;" allowfullscreen="" loading="lazy">
-                    </iframe>
-                    <div class="店舗詳細">
-                        <div>
-                            <p>店舗名</p>
-                            <p class="事務所所在地">店舗所在地</p>
-                            <p>TEL</p>
-                            <p class="FAX">FAX</p>
-                            <p>MAIL</p>
-                        </div>
-                
-                        <div class="チーズアカデミーFUKUOKA">
-                            <p>Arts & Tecnology Lab , Yoru</p>
-                            <p class="福岡県">〒730-0028 広島県広島市中区流川町</p>
-                            <p>000-000-0000</p>
-                            <p class="FAX">999-999-9999</p>
-                            <p>keita@yoru.com</p>
-                        </div>
-                    </div>
-                </div>      
-            </div>
-         -->
+        <div class="border_anime" id="news_text">
+            <p>ACCESS</p>
+        </div>
+        <div class="access">
+                Arts & Tecnology Lab , Yoru<br>
+                〒730-0028 広島県広島市中区流川町<br>
+                000-000-0000<br>
+                keita@yoru.com<br><br><br>
+                <a href="https://www.google.co.jp/maps/place/%E3%80%92730-0028+%E5%BA%83%E5%B3%B6%E7%9C%8C%E5%BA%83%E5%B3%B6%E5%B8%82%E4%B8%AD%E5%8C%BA%E6%B5%81%E5%B7%9D%E7%94%BA%EF%BC%94%E2%88%92%EF%BC%98+%E6%9D%B1%E9%82%A6%E3%83%93%E3%83%AB/@34.3903662,132.4619635,17z/data=!3m1!4b1!4m5!3m4!1s0x355aa2050a24272b:0xc05adc2c08adda8e!8m2!3d34.3903618!4d132.4641522?hl=ja" target="_blank" rel="noopener noreferrer">
+                    [GOOGLE MAP]</a>
+        </div>
         
         
-        <!-- <div class="Arts">
+        
+        <div class="Arts">
                 <p>COPYRIGHT (C) Arts & Tecnology Lab , Yoru. ALL RIGHTS RESERVED.</p>
-            </div> -->
+            </div>
 
 </div>
 
