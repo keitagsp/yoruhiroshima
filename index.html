@@ -40,7 +40,7 @@
 <body>
 
 
-<div class="wrapper">
+<div class="wrapper open_animation">
 
         <!-- ヘッダー -->
         <div class="header">
@@ -73,12 +73,12 @@
         
         
         <!-- pickup -->
-        <div class="pickup">
+        <div class="pickup animation">
                 <div class="border_anime">
                     <p>PICK UP</p>  
                 </div>
         
-                <div class="horizontal_list">
+                <div class="horizontal_list" >
                         <div class="Party">
                             <div class="datetime">
                                 <p>04.29.THU</p>
@@ -178,10 +178,11 @@
 
 
         <!-- News -->
-        <div class="border_anime" >
+        <div class="news animation">
+            <div class="border_anime">
             <p>NEWS</p>
         </div>
-
+        
         <div class="sliderArea">
             <div class="regular_2 slider">
                 <div>
@@ -194,7 +195,7 @@
                     <p class="sliderArea_text">今年も守ヶ浦キャンプ場で夏フェスが決定しました！<br>前売りチケット販売中です！</p>
                     <p class="sliderArea_text_date">2021.04.01</p>
                 </div>
-                <div >
+                <div>
                     <img src="ondo.jpg" alt="">
                     <p class="sliderArea_text">ご近所さんのオンド食堂にアメリカよりJoeClluselが来日します。<br>チェックしてみてください！</p>
                     <p class="sliderArea_text_date">2021.03.26</p>
@@ -211,6 +212,7 @@
                 </div>
             </div>
         </div>
+</div>
 
         
         
@@ -272,7 +274,7 @@
         
         
         <!-- 求人 -->
-        <div class="wanted">
+        <div class="wanted animation">
                 <div class="wanted_text">
                     <p class="wanted_text_title border_anime">WANTED</p>
                     <p class="wanted_text_text">
@@ -291,10 +293,10 @@
         
         
         <!-- アクセス -->
-        <div class="border_anime">
+        <div class="border_anime animation">
             <p>ACCESS</p>
         </div>
-        <div class="access">
+        <div class="access animation">
                 Arts & Tecnology Lab , Yoru<br>
                 〒730-0028 広島県広島市中区流川町<br>
                 000-000-0000<br>
@@ -323,7 +325,44 @@
 
     });
 
-    // メニューをクリックされたら、非表示にする
+        $(function () {
+            $(window).on('load scroll', function () {
+                $('.open_animation').each(function () {
+                    //ターゲットの位置を取得
+                    var target = $(this).offset().top;
+                    //スクロール量を取得
+                    var scroll = $(window).scrollTop();
+                    //ウィンドウの高さを取得
+                    var height = $(window).height();
+                    //ターゲットまでスクロールするとフェードインする
+                    if (scroll > target - height) {
+                        //クラスを付与
+                        $(this).addClass('open_active');
+                    }
+                });
+            });
+        });
+        
+        $(function () {
+            $(window).on('load scroll', function () {
+                $('.animation').each(function () {
+                    //ターゲットの位置を取得
+                    var target = $(this).offset().top;
+                    //スクロール量を取得
+                    var scroll = $(window).scrollTop();
+                    //ウィンドウの高さを取得
+                    var height = $(window).height();
+                    //ターゲットまでスクロールするとフェードインする
+                    if (scroll > target - height) {
+                        //クラスを付与
+                        $(this).addClass('active');
+                    }
+                });
+            });
+        });
+
+
+
     $(function () {
         $('.gNav-menu li a').on("click", function () {
             $('.header_text').removeClass('open');
@@ -332,19 +371,19 @@
 
     
 
-        $('.slider').slick({
-            dots: true, //スライドしたのドット
-            arrows: false,//左右の矢印
-            infinite: true,//スライドのループ
-            pauseOnHover: false,//ホバーしたときにスライドを一時停止しない
-            slidesToShow: 5,
-            slidesToScroll: 5,
-            responsive: [{
-                        breakpoint: 600,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                        }}]});
+    $('.slider').slick({
+        dots: true, //スライドしたのドット
+        arrows: false,//左右の矢印
+        infinite: true,//スライドのループ
+        pauseOnHover: false,//ホバーしたときにスライドを一時停止しない
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        responsive: [{
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }}]});
 
 
 </script>
