@@ -626,6 +626,31 @@ a {
     color: white;
 }
 
+.open_animation{
+	opacity : 0;
+	visibility: hidden;
+	transition: 5s;
+}
+/*アニメーション要素までスクロールした時のスタイル*/
+.open_active{
+	opacity: 1;
+	visibility: visible;
+}
+
+.animation{
+	opacity : 0;
+	visibility: hidden;
+	transition: 2s;
+	transform: translateY(100px);
+}
+/*アニメーション要素までスクロールした時のスタイル*/
+.active{
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+
+
 .wrapper{
     margin: 0 5% ;
     width: 90%;
