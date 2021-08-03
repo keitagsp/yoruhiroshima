@@ -823,14 +823,20 @@ a {
 .border_anime{
     /*線の基点とするためrelativeを指定*/
     position:relative;
-    color: white;
-    display:inline-block;
+    color: rgba(255, 255, 255, 0.74);
     text-decoration: none;
     outline: none;
-    font-size: 2vh;
     display: flex;
     justify-content: center;
+    font-family: urw-din;
+    font-style: normal;
+    letter-spacing: 0.2em;
+    font-size: 14px;
+    margin-top: 200px;
+    margin-bottom: 30px;
 }
+
+
 
 /*線の設定*/
 .border_anime::before {
@@ -865,20 +871,6 @@ a {
     20%{left:0;opacity:1}
     80%{left:30%;opacity:1}
     100%{left:30%;opacity:0}
-}
-
-.border_anime{
-    display: flex;
-    justify-content: center;
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.74);
-    margin-bottom: 30px;
-}
-
-.pickup{    
-  font-family: urw-din;
-  font-style: normal;
-  letter-spacing: 0.2em;
 }
 
 
@@ -925,14 +917,6 @@ a {
 .dj{
 }
 
-
-#news_text{
-  font-family: urw-din;
-  font-style: normal;
-  margin-top: 200px;
-  letter-spacing: 0.2em;
-
-}
 
 .sliderArea {
   max-width: 100%;
@@ -1008,7 +992,6 @@ a {
     margin-top: 200px;
     letter-spacing: 0.2em;
     margin-bottom: 50px;
-    width: 100%;
 }
 
 .contact{

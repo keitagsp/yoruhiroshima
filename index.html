@@ -178,7 +178,7 @@
 
 
         <!-- News -->
-        <div class="border_anime" id="news_text" >
+        <div class="border_anime" >
             <p>NEWS</p>
         </div>
 
@@ -195,6 +195,16 @@
                     <p class="sliderArea_text_date">2021.04.01</p>
                 </div>
                 <div >
+                    <img src="ondo.jpg" alt="">
+                    <p class="sliderArea_text">ご近所さんのオンド食堂にアメリカよりJoeClluselが来日します。<br>チェックしてみてください！</p>
+                    <p class="sliderArea_text_date">2021.03.26</p>
+                </div>
+                <div>
+                    <img src="ondo.jpg" alt="">
+                    <p class="sliderArea_text">ご近所さんのオンド食堂にアメリカよりJoeClluselが来日します。<br>チェックしてみてください！</p>
+                    <p class="sliderArea_text_date">2021.03.26</p>
+                </div>
+                <div>
                     <img src="ondo.jpg" alt="">
                     <p class="sliderArea_text">ご近所さんのオンド食堂にアメリカよりJoeClluselが来日します。<br>チェックしてみてください！</p>
                     <p class="sliderArea_text_date">2021.03.26</p>
@@ -281,7 +291,7 @@
         
         
         <!-- アクセス -->
-        <div class="border_anime" id="news_text">
+        <div class="border_anime">
             <p>ACCESS</p>
         </div>
         <div class="access">
@@ -327,7 +337,15 @@
             arrows: false,//左右の矢印
             infinite: true,//スライドのループ
             pauseOnHover: false,//ホバーしたときにスライドを一時停止しない
-        });
+            slidesToShow: 5,
+            slidesToScroll: 5,
+            responsive: [{
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                        }}]});
+
 
 </script>
 
