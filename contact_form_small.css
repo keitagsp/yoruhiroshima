@@ -873,6 +873,10 @@ select {
   background-position: right 10px center;
 }
 
+.come{
+margin-top: 20px;
+}
+
 .inputcome{
   width: 260px;
   height: 250px;

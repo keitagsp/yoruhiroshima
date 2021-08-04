@@ -759,8 +759,11 @@ a {
     font-size: 1.1vw;
     position: fixed;
     z-index: 10;
-    background-color: rgba(1, 15, 19, 0.705);
+    background-color: rgba(1, 15, 19, 0.801);
     backdrop-filter: blur(8px);
+}
+.minitsuki{
+  margin-top: 10px;
 }
 
 .minitsuki img{
@@ -882,7 +885,6 @@ a {
 }
 
 .gnavi li{
-    margin-bottom:20px;
 }
 
 .gnavi li a{
@@ -938,7 +940,7 @@ a {
 
 .Top{
   display: flex;
-  padding-top: 180px;
+  padding-top: 20vh;
 }
 
 .rogo{
@@ -956,13 +958,12 @@ a {
 }
 
 .rogo img{
-    width: 45%;
+    width: 40%;
 }
 
 .tsuki img{
-    width: 80%;
+    width: 70%;
 }
-
 
 .border_anime{
   position:relative;
@@ -974,9 +975,8 @@ a {
   font-style: normal;
   letter-spacing: 0.2em;
   margin-top: 220px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
-
 
 /*線の設定*/
 .border_anime::before {
@@ -1030,7 +1030,7 @@ a {
 
 .Party{
     width: 20%;
-    margin: 6%;
+    margin: 0 6% 6% 6%;
 
 }
 
@@ -1068,15 +1068,15 @@ a {
 
 .sliderArea {
   max-width: 100%;
-  padding: 0 25px;
+  padding: 0 50px;
   color: #fff;
 }
 
 .sliderArea_text{
   font-weight: 100;
   font-style: normal;
-  font-size: 17px;
-  letter-spacing: 0.2em;
+  font-size: 15px;
+  letter-spacing: 0.1em;
   line-height: 1.5em;
   padding-top: 10px;
 }
@@ -1132,6 +1132,8 @@ a {
   letter-spacing: 0.2em;
   line-height: 1.5em;
 }
+
+
 
 .wanted_text_title{
   font-family: urw-din;
@@ -1303,8 +1305,6 @@ margin-bottom: 80px;
 	padding-bottom: 24px;
 }
 
-
-
 .contact_form p{
 	margin-bottom: 24px;
 }
@@ -1320,13 +1320,6 @@ margin-bottom: 80px;
 	vertical-align: top;
 }
 
-.送信{
-    padding: 10px 80px 10px 80px;
-    border: 1px solid grey;
-    border-radius: 40px;
-    background-color: grey;
-    color: black;
-}
 
 
 .access{
@@ -1334,7 +1327,7 @@ margin-bottom: 80px;
     color: white;
     text-align: center;
     letter-spacing: 0.2em;
-    line-height: 1.5em;
+    line-height: 3em;
 }
 
 .Arts{
