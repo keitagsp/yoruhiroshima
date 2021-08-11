@@ -3,11 +3,10 @@
 // exit();
 
 $name = $_POST["name"]; //データを受け取り
-$kana = $_POST["kana"];
 $email = $_POST["email"];
 $posi = $_POST["posi"];
 $question = $_POST["question"];
-$write_data = "{$name},{$kana},{$email},{$posi},{$question}\n";//$write_dataはnameとemail
+$write_data = "{$name},{$email},{$posi},{$question}\n";//$write_dataはnameとemail
 $file = fopen('data/data.csv','a');// ファイルを開く 引数はa
 flock($file,LOCK_EX); //ファイルをロック
 fwrite($file, $write_data);// データに書き込み，
