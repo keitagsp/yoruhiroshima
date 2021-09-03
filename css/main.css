@@ -716,9 +716,9 @@ body{
 .open_animation{
 	opacity : 0;
 	visibility: hidden;
-	transition: 5s;
-}
-/*アニメーション要素までスクロールした時のスタイル*/
+	transition: 3s;
+} 
+
 .open_active{
 	opacity: 1;
 	visibility: visible;
