@@ -32,6 +32,6 @@ if (!$val) {
   $_SESSION["is_admin"] = $val["is_admin"];
   $_SESSION["username"] = $val["username"];
   $_SESSION["id"] = $val["id"];
-  header("Location:index.html");
+  header("Location:login_index.html");
   exit();
 }
