@@ -607,9 +607,6 @@ template {
 */
 
 
-html{
-    height: 100%;
-}
 
 body{
   font-family: YakuHanJP, "Hiragino Sans", sans-serif;
@@ -625,21 +622,7 @@ a {
     color: white;
 }
 
-.wrapper{
-    margin: 0 5% ;
-    width: 90%;
-    height: 100%;
-}
 
-
-.minitsuki{
-    margin-left: 3%;
-}
-
-.minitsuki img{
-    width: 100%;
-    display: none;
-}
 
 .header .btn-gNav{
     position: fixed;
@@ -770,25 +753,26 @@ a {
 
 
 .form_parent{
-  width: 414px;
-  margin: 110px auto;
+  margin: 110px 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
+
 .border_anime{
-    /*線の基点とするためrelativeを指定*/
-    position:relative;
-    color: white;
-    display:inline-block;
-    text-decoration: none;
-    outline: none;
-    font-size: 2vh;
-    display: flex;
-    justify-content: center;
+  font-family: urw-din;
+  font-style: normal;
+  position:relative;
+  letter-spacing: 0.2em;
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.74);
+  margin-bottom: 50px;
 }
+
 
 /*線の設定*/
 .border_anime::before {
@@ -797,7 +781,7 @@ a {
     position: absolute;
     bottom: -10px;
     /*線の形状*/
-    width: 120%;
+    width: 100%;
     height: 1px;
     background: rgba(255, 255, 255, 0.5);
 }
@@ -825,16 +809,6 @@ a {
     100%{left:50%;opacity:0}
 }
 
-.border_anime{
-  font-family: urw-din;
-  font-style: normal;
-  letter-spacing: 0.2em;
-  display: flex;
-  justify-content: center;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.74);
-  margin-bottom: 30px;
-}
 
 .form_group{
   display: flex;
@@ -853,7 +827,7 @@ a {
 }
 
 input {
-  width: 260px;
+  width: 100%;
   height: 28px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   padding: 20px,0;
@@ -867,18 +841,18 @@ select {
   border-radius: 0;
   height: 30px;
   width: 200px;
-  background-image: url(./chevron-down-solid.svg);
+  background-image: url(../img/chevron-down-solid.svg);
   background-repeat: no-repeat;
   background-size: 12px 10px;
   background-position: right 10px center;
 }
 
 .come{
-margin-top: 20px;
+margin: 20px 0 5px 0;
 }
 
 .inputcome{
-  width: 260px;
+  width: 100%;
   height: 250px;
   color: white;
   font-size: 18px;
@@ -887,22 +861,11 @@ margin-top: 20px;
   border-radius: 2px;
 }
 
-.underlinecome {
-  font-family: urw-din;
-  font-style: normal;
-  letter-spacing: 0.2em;
-  margin-top: 80px;
-}
 
 .send{
-  font-family: urw-din;
-  font-style: normal;
-  letter-spacing: 0.2em;
-  padding: 13px 70px;
-  border-radius: 2px;
-  background: linear-gradient(90deg, rgb(44, 44, 44),rgb(34, 34, 34),rgb(44, 44, 44),rgb(34, 34, 34));
-  background-size: 200% 200%;
-  animation: gradient 5s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes gradient {
@@ -917,7 +880,24 @@ background-position: 0% 50%
 }
 }
 
+.button{
+  width: 100%;
+  font-family: urw-din;
+  font-style: normal;
+  letter-spacing: 0.2em;
+  margin-top: 80px;
+  padding: 18px 70px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, rgb(44, 44, 44),rgb(34, 34, 34),rgb(44, 44, 44),rgb(34, 34, 34));
+  background-size: 200% 200%;
+  animation: gradient 5s ease infinite;
+
+}
+
 
 .home{
-  display: none;
+  font-family: urw-din;
+  font-style: normal;
+  letter-spacing: 0.2em;
+  margin-top: 80px;
 }

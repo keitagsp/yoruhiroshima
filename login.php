@@ -59,34 +59,34 @@
         </div>
 
 
-        <div class="main">
+        <div class="form_parent">
             <form action="login_act.php" method="post">
 
-                <div class="contact_form">
-                    <table class="contact_form_table">
-                        <tr>
-                            <td>アカウント名</td>
-                            <td class="form_text">
-                                <input type="text" name="username">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>パスワード</td>
-                            <td class="form_text">
-                                <input type="text" name="password">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>
-                                <div class="underlinecome"></div>
-                                <button class="中央から外 bgcenterout 送信">送信</button>
-                                <a href="login_register.php">or register</a>
-
-                            </td>
-                        </tr>
-                    </table>
+                <div class="border_anime">
+                    <p>LOGIN</p>
                 </div>
+
+                <div class="form_group">
+                    <p class="item_label">アカウント名</p>
+                    <p class="item_label_en">Acount Name</p>
+                </div>
+                <input class="input" type="text" name="username">
+
+
+                <div class="form_group">
+                    <p class="item_label">パスワード</p>
+                    <p class="item_label_en">password</p>
+                </div>
+                <input class="input" type="text" name="password">
+
+                <div>
+                    <button class="button send">ログインする</button>
+                </div>
+
+                <div class="for_register">
+                    <a href="login_register.php">[メンバー登録されていない方はこちら]</a>
+                </div>
+
             </form>
         </div>
     </div>

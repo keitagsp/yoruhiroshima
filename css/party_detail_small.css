@@ -756,19 +756,17 @@ body{
     transform: scale(1, 1);/*X方向にスケール拡大*/
 }
 
-.main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 .Party{
     width: 100%;
     display: flex;
     flex-direction: column; 
     align-items: center;
+    color: white;
     margin-top: 150px;
 }
+
+
 
 .flyer{
     width: 90%;
@@ -780,7 +778,8 @@ body{
 }
 
 .date{
-    padding-left: 15px;
+  width: 90%;
+  padding: 15px;
 }
 
 .date p{
@@ -819,7 +818,8 @@ body{
   font-family: urw-din;
   font-style: normal;
   letter-spacing: 0.2em;
-  padding: 20px 130px;
+  padding: 20px 100px;
+  margin-top: 80px;
   border-radius: 2px;
   background: linear-gradient(90deg, rgb(44, 44, 44),rgb(34, 34, 34),rgb(44, 44, 44),rgb(34, 34, 34));
   background-size: 200% 200%;
