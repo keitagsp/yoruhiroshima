@@ -588,8 +588,6 @@ template {
 }
 
 
-
-
 /* 
 リセットーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 リセットーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
@@ -611,256 +609,74 @@ template {
 
 
 body{
-    font-family: urw-din;
-    font-style: normal;
-    background-color: rgb(1, 15, 19);
-    font-weight: 100;
-    height: 950px;
-}
-
-.wrapper{
-    margin: 0 5% ;
-    width: 90%;
-    height: 100%;    
-}
-
-
-
-.header .btn-gNav{
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 30px;
-    height: 24px;
-    z-index: 3;
-    box-sizing: border-box;
-    cursor: pointer;
-    -webkit-transition: all 400ms;
-    transition: all 400ms;
-}
-
-.header .btn-gNav span{
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background: rgba(255, 255, 255, 0.863);
-    border-radius: 10px;
-    -webkit-transition: all 400ms;
-    transition: all 400ms;
-}
-
-.header .btn-gNav span:nth-child(1) {
-    top:0;
-}
-
-.header .btn-gNav span:nth-child(2) {
-    top:10px;
-}
-
-.header .btn-gNav.open span:nth-child(1){
-    background: #fff;
-    top: 6px;
-    -webkit-transform: rotate(-45deg);
-    -moz-transform   : rotate(-45deg);
-    transform        : rotate(-45deg);
-}
-
-.header .btn-gNav.open span:nth-child(2),.header .btn-gNav.open span:nth-child(3){
-    top: 6px;
-    background :#fff;
-    -webkit-transform: rotate(45deg);
-    -moz-transform   : rotate(45deg);
-    transform        : rotate(45deg);
-}
-
-.header_text{
-    position: fixed;
-    top: 0;
-    right: -100%;
-    font-family: urw-din;
-    font-style: normal;
-    font-size: 16px;
-    /* box-sizing: border-box; */
-    z-index: 2;
-    transition: .3s;
-}
-
-.header_text.open{
-    right: 0px;
-    background-color: rgb(175, 175, 175);
-    width: 100%;
-    height: 100vh;
-}
-
-.header_text .gnavi{
-    width: 100%;
-    height:100vh;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-}
-
-.header_text .gnavi li{
-    display: block;
-    padding : 20px 30px;
-}
-
-.header_text .gnavi li a{
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-}
-
-
-.gnavi li a{
-    display: block;
-    padding:10px 1.5vw;
-    text-decoration: none;
-}
-
-.gnavi li{
-    margin-bottom:20px;
-}
-
-.gnavi li a{
-    /*線の基点とするためrelativeを指定*/
-	position: relative;
-}
-
-.gnavi li.current a,
-.gnavi li a:hover{
-	color: white;
-}
-
-.gnavi li a::after {
-    content: '';
-    /*絶対配置で線の位置を決める*/
-    position: absolute;
-    bottom: 0;
-    left: 10%;
-    /*線の形状*/
-    width: 80%;
-    height: 1px;
-    background:rgba(255, 255, 255, 0.315) ;
-    /*アニメーションの指定*/
-    transition: all .5s;
-    transform: scale(0, 1);/*X方向0、Y方向1*/
-    transform-origin: center top;/*上部中央基点*/
-}
-
-.gnavi li.current a::after,
-.gnavi li a:hover::after {
-    transform: scale(1, 1);/*X方向にスケール拡大*/
-}
-
-
-.Party{
-    width: 100%;
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    color: white;
-    margin-top: 80px;
-}
-
-
-.flyer{
-    width: 90%;
-}
-
-.flyer img{
-    max-width: 100%;
-    height: auto;
-}
-
-.date{
-  width: 90%;
-  padding: 15px;
-}
-
-.date p{
-    color: rgba(255, 255, 255, 0.74);
-}
-
-.Party_title{
-    font-size: 32px;
-    font-weight: 400;
-    padding-top: 10px;
-    letter-spacing: 0.1em;
-}
-
-.Music_by{
-}
-
-.dj{
-    font-size: 20px;
-    padding-top: 7px;
-}
-
-.time_price_ticket{
-    display: flex;
-    font-size: 15px;
-    color: rgba(255, 255, 255, 0.74);
-    padding-top: 30px;
-}
-
-.ticket{
   font-family: YakuHanJP, "Hiragino Sans", sans-serif;
+  background-color: rgb(1, 15, 19);
+  color: white;
   font-weight: 100;
-  padding: 25px 0 0 90px;
-}
-
-.ticket p{
-  font-size: 11px;
-  padding-bottom: 3px;
-}
-
-select {
-  -webkit-appearance: none;
-  appearance: none; /* デフォルトのスタイルを無効 */
-  border-bottom:solid 1px rgba(255, 255, 255, 0.3);
-  border-radius: 0;
-  height: 30px;
-  width: 50px;
-  background-image: url(../img/chevron-down-solid.svg);
-  background-repeat: no-repeat;
-  background-size: 12px 10px;
-  background-position: right 10px center;
+  height: 100%;
 }
 
 
 
-.by_ticket{
+.border_anime{
   font-family: urw-din;
   font-style: normal;
+  position:relative;
   letter-spacing: 0.2em;
-  padding: 20px 100px;
-  margin-top: 25px;
-  border-radius: 2px;
-  background: linear-gradient(90deg, rgb(44, 44, 44),rgb(34, 34, 34),rgb(44, 44, 44),rgb(34, 34, 34));
-  background-size: 200% 200%;
-  animation: gradient 5s ease infinite;
-}
-
-@keyframes gradient {
-0% {
-background-position: 0% 50%
-}
-50% {
-background-position: 100% 50%
-}
-100% {
-background-position: 0% 50%
-}
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.74);
+  margin: 150px 0 50px 0;
 }
 
 
+/*線の設定*/
+.border_anime::before {
+    content: "";
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: -10px;
+    /*線の形状*/
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.5);
+}
 
 
+/*線と矢印を繰り返しアニメーション*/
+.border_anime::before {
+    animation: arrowlong01 2s ease infinite;
+}
+.border_anime::after {
+    animation: arrowlong02 2s ease infinite;
+}
 
+@keyframes arrowlong01{
+    0%{width:0;opacity:0}
+    20%{width:0;opacity:1}
+    80%{width: 50%;opacity:1}
+    100%{width: 50%;opacity:0}
+}
 
+@keyframes arrowlong02{
+    0%{left:0;opacity:0}
+    20%{left:0;opacity:1}
+    80%{left:50%;opacity:1}
+    100%{left:50%;opacity:0}
+}
 
+.text{
+    margin-top: 100px;
+}
 
-
-
+.text p{
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 200;
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 0.74);
+    margin: 40px 0 0 0;
+}
 

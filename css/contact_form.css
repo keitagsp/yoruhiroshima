@@ -956,3 +956,8 @@ background-position: 0% 50%
   letter-spacing: 0.2em;
   margin-bottom: 180px;
 }
+
+.hide {
+  /* 表示の切り替えに使用する */
+  display: none;
+}

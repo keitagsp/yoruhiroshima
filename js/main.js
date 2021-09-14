@@ -1,6 +1,12 @@
-'usestrict';
-{
-const hidden_news = document.getElementById('hidden_news');
-const btn = document.getElementById('btn');
-btn.addEventListener('click', () => { hidden_news.style.display === 'none' ? hidden_news.style.display = 'block' : hidden_news.style.display = 'none'; });
-}
+$(function () {
+    $('#selectPhoto').change(function () {
+        //選択したoptionのvalueを取得
+        var val = $(this).val();
+        //先頭に#を付けてvalueの値をidに変換
+        var selectPhotoId = '#' + val;
+        //一度すべてのブロックを非表示にする
+        $('ul li').hide();
+        //選択したブロックのみを表示
+        $(selectPhotoId).show();
+    });
+});
