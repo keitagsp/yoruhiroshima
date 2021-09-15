@@ -667,16 +667,28 @@ body{
 }
 
 .text{
-    margin-top: 100px;
+  margin-top: 100px;
 }
 
 .text p{
-    display: flex;
-    justify-content: center;
-    font-size: 12px;
-    font-weight: 200;
-    letter-spacing: 0.2em;
-    color: rgba(255, 255, 255, 0.74);
-    margin: 40px 0 0 0;
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 200;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.74);
+  margin: 40px 0 0 0;
+}
+
+.home{
+  font-family: urw-din;
+  font-style: normal;
+  letter-spacing: 0.2em;
+  margin-top: 80px;
+}
+
+a{
+  display: flex;
+  justify-content: center;
 }
 
