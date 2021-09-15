@@ -2,12 +2,6 @@
 session_start();
 include("functions.php");
 
-try {
-  $db = new PDO('mysql:dbname=heroku_c1e6e970159724e;host=us-cdbr-east-04.cleardb.com;charset=utf8', 'baed42e817e38d', 'd14966da');
-} catch (PDOException $e) {
-  print('DB接続エラー:' . $e->getMessage());
-}
-
 
 $username = $_POST["username"];
 $password = $_POST["password"];
