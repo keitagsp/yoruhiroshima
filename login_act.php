@@ -2,6 +2,7 @@
 session_start();
 include("functions.php");
 
+$pdo = connect_to_db();
 
 $username = $_POST["username"];
 $password = $_POST["password"];
