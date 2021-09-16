@@ -1,10 +1,10 @@
 <?php
 
-try {
-    $db = new PDO('mysql:dbname=heroku_11606bd7c89837a;host=us-cdbr-east-04.cleardb.com;charset=utf8', 'b090d986427bac', '188cdc2c');
-} catch (PDOException $e) {
-    print('DB接続エラー:' . $e->getMessage());
-}
+// try {
+//     $db = new PDO('mysql:dbname=heroku_11606bd7c89837a;host=us-cdbr-east-04.cleardb.com;charset=utf8', 'b090d986427bac', '188cdc2c');
+// } catch (PDOException $e) {
+//     print('DB接続エラー:' . $e->getMessage());
+// }
 
 
 // function connect_to_db()
@@ -20,6 +20,22 @@ try {
 //         exit();
 //     }
 // }
+
+
+
+function connect_to_db()
+{
+    $dbn = 'mysql:dbname=heroku_11606bd7c89837a;host=us-cdbr-east-04.cleardb.com;charset=utf8';
+    $user = 'b090d986427bac';
+    $pwd = '188cdc2c';
+
+    try {
+        return new PDO($dbn, $user, $pwd);
+    } catch (PDOException $e) {
+        print('DB接続エラー:' . $e->getMessage());
+    }
+}
+
 
 function check_session_id()
 {
