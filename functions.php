@@ -1,7 +1,7 @@
 <?php
 
 try {
-    $db = new PDO('mysql:dbname=heroku_c1e6e970159724e;host=us-cdbr-east-04.cleardb.com;charset=utf8', 'baed42e817e38d', 'd14966da');
+    $db = new PDO('mysql:dbname=heroku_11606bd7c89837a;host=us-cdbr-east-04.cleardb.com;charset=utf8', 'b090d986427bac', '188cdc2c');
 } catch (PDOException $e) {
     print('DB接続エラー:' . $e->getMessage());
 }
@@ -14,9 +14,10 @@ function connect_to_db()
     $pwd = '';
 
     try {
-        $db = new PDO('mysql:dbname=heroku_c1e6e970159724e;host=us-cdbr-east-04.cleardb.com;charset=utf8', 'baed42e817e38d', 'd14966da');
+        return new PDO($dbn, $user, $pwd);
     } catch (PDOException $e) {
-        print('DB接続エラー:' . $e->getMessage());
+        echo json_encode(["db error" => "{$e->getMessage()}"]);
+        exit();
     }
 }
 
