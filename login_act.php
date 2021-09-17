@@ -7,7 +7,7 @@ $pdo = connect_to_db();
 $username = $_POST["username"];
 $password = $_POST["password"];
 
-$sql = 'SELECT * FROM users_table WHERE username=:username AND password=:password AND is_deleted=0';
+$sql = 'SELECT * FROM users_table WHERE username=:username AND password=:password';
 
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':username', $username, PDO::PARAM_STR);

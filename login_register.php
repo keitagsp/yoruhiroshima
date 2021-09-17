@@ -3,44 +3,106 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>todoリストユーザ登録画面</title>
+
+  <!-- jquery--------------------------------------------------------------------------------------------------- -->
+
+  <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="slick-1.8.1/slick/slick.min.js"></script>
+
+  <!-- フォント--------------------------------------------------------------------------------------------------- -->
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.2.0/dist/css/yakuhanjp.min.css">
+
+  <link rel="stylesheet" href="https://use.typekit.net/opa4ojb.css">
+
+  <!-- css--------------------------------------------------------------------------------------------------- -->
+
+  <link rel="stylesheet" href="./css/login_main.css" media="screen and (min-width:600px)">
+  <link rel="stylesheet" href="./css/login_small.css" media="screen and (max-width:600px)">
+  <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css" media="screen and (min-width:600px)">
+  <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/small-slick-theme.css" media="screen and (max-width:600px)">
+  <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css">
+
+
+  <title>yoru</title>
 </head>
 
 <body>
+  <div class="wrapper">
 
-  <form action="login_register_act.php" method="POST">
+    <div class="form_parent">
+      <form action="login_register_act.php" method="post">
 
-    <h1>メンバー登録</h1>
+        <div class="border_anime">
+          <p>SIGN UP</p>
+        </div>
 
-    <div>
-      お名前: <input type="text" class="touroku_input" id="username" name="username" maxlength="20" validate="required blacklist" required>
+
+        <div class="form_group">
+          <p class="item_label">アカウント名</p>
+          <p class="item_label_en">Acount Name</p>
+        </div>
+        <input class="input" type="text" class="touroku_input" id="username" name="username" maxlength="20" validate="required blacklist" required>
+
+
+        <div class="form_group">
+          <p class="item_label">メール</p>
+          <p class="item_label_en">Mail</p>
+        </div>
+        <input class="input" type="email" class="touroku_input" id="email" name="email" validate="required blacklist" required>
+
+
+        <div class="form_group">
+          <p class="item_label">パスワード</p>
+          <p class="item_label_en">password</p>
+        </div>
+        <input class="input" type="text" class="touroku_input" id="password" name="password" validate="required blacklist" required>
+
+
+        <div class="form_group">
+          <p class="item_label">住所</p>
+          <p class="item_label_en">Address</p>
+        </div>
+        <input class="input" type="text" class="touroku_input" id="address" name="address" validate="required blacklist" required>
+
+
+        <div class="form_group">
+          <p class="item_label">携帯電話番号</p>
+          <p class="item_label_en">Mobile Telephone</p>
+        </div>
+        <input class="input" type="tel" class="touroku_input" id="mobile" name="mobile" validate="required blacklist" required>
+
+
+        <div>
+          <button class="button send">登録</button>
+        </div>
+        <div class="home">
+          <a href="index.php">[ HOME ]</a>
+        </div>
+
+
+        <!-- <div class="for_register">
+            <a href="login_register.php">[メンバー登録されていない方はこちら]</a>
+          </div> -->
+
+      </form>
     </div>
+  </div>
 
-    <div>
-      emailアドレス: <input type="email" class="touroku_input" id="email" name="email" validate="required blacklist mailadd" required>
-    </div>
 
-    <div>
-      パスワード: <input type="password" class="touroku_input" id="password" name="password" validate="required blacklist alpNumeric" required>
-    </div>
+  <div>
+    <button>登録</button>
+  </div>
 
-    <div>
-      住所: <input type="text" class="touroku_input" id="address" name="address" validate="required blacklist" required>
-    </div>
-
-    <div>
-      電話番号: <input type="text" class="touroku_input" id="tel" name="tel" validate="required blacklist alpNumeric" required>
-    </div>
-
-    <div>
-      <button>登録</button>
-    </div>
-
-    <a href="login.php">ログイン</a>
+  <a href="login.php">ログイン</a>
 
   </form>
 
+  </div>
+  </div>
 
   <script>
     $(document).ready(function() {

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- ホスト: localhost
--- 生成日時: 2021 年 9 月 16 日 10:35
+-- 生成日時: 2021 年 9 月 17 日 18:39
 -- サーバのバージョン： 10.4.19-MariaDB
 -- PHP のバージョン: 7.3.28
 
@@ -32,20 +32,11 @@ CREATE TABLE `users_table` (
   `username` varchar(128) NOT NULL,
   `email` varchar(128) NOT NULL,
   `password` varchar(64) NOT NULL,
-  `is_admin` int(1) NOT NULL,
-  `is_deleted` int(1) NOT NULL,
+  `address` varchar(128) NOT NULL,
+  `mobile` varchar(128) NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- テーブルのデータのダンプ `users_table`
---
-
-INSERT INTO `users_table` (`id`, `username`, `email`, `password`, `is_admin`, `is_deleted`, `created_at`, `updated_at`) VALUES
-(10, 'keitagsp', 'aaa', '1102', 0, 0, '2021-09-03 16:11:02', '2021-09-03 16:11:02'),
-(11, 'abe', 'keitagsp@me.com', '1102', 0, 0, '2021-09-03 16:58:39', '2021-09-03 16:58:39'),
-(12, 'keitagsp', 'keitagsp@gmail.com', '1102', 0, 0, '2021-09-03 17:18:35', '2021-09-03 17:18:35');
 
 --
 -- ダンプしたテーブルのインデックス

@@ -4,7 +4,10 @@ include('functions.php');
 if (
   !isset($_POST['username']) || $_POST['username'] == ''||
   !isset($_POST['email']) || $_POST['email'] == ''||
-  !isset($_POST['password']) || $_POST['password'] == ''
+  !isset($_POST['password']) || $_POST['password'] == ''||
+  !isset($_POST['address']) || $_POST['address'] == ''||
+  !isset($_POST['mobile']) || $_POST['mobile'] == ''
+
 ) {
   echo json_encode(["error_msg" => "no input"]);
   exit();
@@ -13,6 +16,9 @@ if (
 $username = $_POST["username"];
 $email = $_POST["email"];
 $password = $_POST["password"];
+$address = $_POST["address"];
+$mobile = $_POST["mobile"];
+
 
 $pdo = connect_to_db();
 
@@ -34,12 +40,15 @@ if ($stmt->fetchColumn() > 0) {
   exit();
 }
 
-$sql = 'INSERT INTO users_table(id, username, email, password, is_admin, is_deleted, created_at, updated_at) VALUES(NULL, :username, :mail,:password, 0, 0, sysdate(), sysdate())';
+$sql = 'INSERT INTO users_table(id, username, email, password, address, mobile, created_at, updated_at) VALUES(NULL, :username, :email, :password, :address, :mobile, sysdate(), sysdate())';
 
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':username', $username, PDO::PARAM_STR);
 $stmt->bindValue(':email', $email, PDO::PARAM_STR);
 $stmt->bindValue(':password', $password, PDO::PARAM_STR);
+$stmt->bindValue(':address', $address, PDO::PARAM_STR);
+$stmt->bindValue(':mobile', $mobile, PDO::PARAM_STR);
+
 $status = $stmt->execute();
 
 if ($status == false) {

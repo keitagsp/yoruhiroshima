@@ -34,7 +34,7 @@
 <body>
 
 
-    <div class="wrapper open_animation">
+    <div class="wrapper">
 
         <!-- ヘッダー -->
         <div class="header">
@@ -47,7 +47,7 @@
             </div>
             <div class="header_text">
                 <ul class="gnavi">
-                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="index.php">HOME</a></li>
                     <li><a href="calender02.html">CALENDER</a></li>
                     <li><a href="audience.php">AUDIENCE</a></li>
                     <li><a href="https://suzuri.jp/keitagsp" target="_blank" rel="noopener noreferrer">GOODS</a></li>

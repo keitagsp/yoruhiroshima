@@ -866,8 +866,11 @@ a {
 
 
 .button{
+  display: flex;
+  justify-content: center;
+  width: 100%;
   font-size: 12px;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.5em;
   padding: 18px 80px;
   margin-top: 80px;
   border-radius: 2px;
@@ -893,5 +896,5 @@ background-position: 0% 50%
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 130px;
+  margin-top: 80px;
 }
