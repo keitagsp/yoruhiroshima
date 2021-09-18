@@ -29,9 +29,8 @@ if (!$val) {
 } else {
   $_SESSION = array();
   $_SESSION["session_id"] = session_id();
-  $_SESSION["is_admin"] = $val["is_admin"];
   $_SESSION["username"] = $val["username"];
-  $_SESSION["id"] = $val["id"];
+  $_SESSION["email"] = $val["email"];
   header("Location:login_index.php");
   exit();
 }

@@ -1,3 +1,12 @@
+<?php
+session_start();
+if ( !isset(  $_SESSION["session_id"]) || $_SESSION["session_id"] != session_id()){
+    header("Location:no_login.html");
+    exit();
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <html>
@@ -79,7 +88,7 @@
                 
                 
                 <div class="horizontal_list">
-                    <a href="party_detail.html" class="Party">
+                    <a href="party_detail.php" class="Party">
                         <div class="flyer">
                             <img src="./img/0429auditorylounge.jpg" alt="">
                         </div>
