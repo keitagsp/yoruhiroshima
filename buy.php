@@ -46,40 +46,62 @@ foreach ($products as $name => $product) {
 </head>
 
 <body>
-    <?php
-    echo ($_SESSION["username"]);
-    echo ($_SESSION["email"]);
-    ?>
 
-    <div class="cartlist">
-        <table class="cart-table">
-            <tbody>
-                <?php foreach ($products as $name => $product) : ?>
+    <div class="wrapper">
+
+        <div class="form_parent">
+
+            <div class="border_anime">
+                <p>CHECK OUT</p>
+            </div>
+
+
+            <table class="cart-table" id="top">
+
+                <tbody>
                     <tr>
-                        <td label="商品名："><?php echo $name; ?></td>
-                        <td label="価格：" class="text-right">¥<?php echo $product['price']; ?></td>
-                        <td label="個数：" class="text-right"><?php echo $product['count']; ?></td>
-                        <td label="小計：" class="text-right">¥<?php echo $product['price'] * $product['count']; ?></td>
                         <td>
-                            <form action="buy.php" method="post">
-                                <input type="hidden" name="delete_name" value="<?php echo $name; ?>">
-                                <button type="submit" class="btn btn-red">削除</button>
-                            </form>
+                            <p>Mail</p>
+                        </td>
+                        <td>
+                            <?php echo ($_SESSION["email"]); ?>
                         </td>
                     </tr>
-                <?php endforeach; ?>
-                <tr class="total">
-                    <th colspan="3">合計</th>
-                    <td colspan="2">¥<?php echo $total; ?></td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="cart-btn">
-            <button type="button" class="btn btn-blue">購入手続きへ</button>
-            <button type="button" class="btn btn-gray">戻る</button>
+
+                </tbody>
+            </table>
+
+
+            <table class="cart-table">
+
+                <tbody>
+
+                    <?php foreach ($products as $name => $product) : ?>
+                        <tr>
+                            <td label="商品名："><?php echo $name; ?></td>
+                            <td label="価格：" class="text-right">¥<?php echo $product['price']; ?></td>
+                            <td label="個数：" class="text-right"><?php echo $product['count']; ?>枚</td>
+                            <td label="小計：" class="text-right">¥<?php echo $product['price'] * $product['count']; ?></td>
+                            <td>
+                                <form action="buy.php" method="post">
+                                    <input type="hidden" name="delete_name" value="<?php echo $name; ?>">
+                                    <button type="submit" class="btn btn-red">取消し</button>
+                                </form>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                    <tr class="total">
+                        <th colspan="3">TOTAL</th>
+                        <td colspan="2">¥<?php echo $total; ?></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="cart-btn">
+                <button type="button" class="buy">購入手続きへ</button>
+                <a href="party_detail.php" class="back">[ 戻る ]</a>
+            </div>
         </div>
     </div>
-
 </body>
 
 </html>
