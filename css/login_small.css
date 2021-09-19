@@ -759,6 +759,11 @@ a {
     transform: scale(1, 1);/*X方向にスケール拡大*/
 }
 
+.wrapper{
+    margin: 0 5% ;
+    width: 90%;
+    height: 100%;    
+}
 
 
 
