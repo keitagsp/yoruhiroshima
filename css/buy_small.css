@@ -560,7 +560,7 @@ th {
 
 th {
   text-align: left;
-  font-weight: bold;
+  font-weight: 100;
 }
 
 
@@ -689,7 +689,7 @@ body{
 /* cart */
 .cart-table {
     width: 100%;
-    font-size: 9px;
+    font-size: 12px;
 }
 
 .text-right {
@@ -708,13 +708,11 @@ table#top {
         padding: 10px 10px;
 }
 
-.cart-table th {
-    color: #fff;
-}
 
 
 .total td{ 
-        text-align: center;
+    text-align: right;
+    font-weight: 600;
 }
 
 

@@ -92,7 +92,7 @@ foreach ($products as $name => $product) {
                     <?php endforeach; ?>
                     <tr class="total">
                         <th colspan="3">TOTAL</th>
-                        <td colspan="2">¥<?php echo $total; ?></td>
+                        <td class="total_price" colspan="2">¥<?php echo $total; ?></td>
                     </tr>
                 </tbody>
             </table>
