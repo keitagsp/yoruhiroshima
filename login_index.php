@@ -271,11 +271,17 @@ if (!isset($_SESSION["session_id"]) || $_SESSION["session_id"] != session_id()) 
     <script>
         $(function() {
             $('.btn-gNav').on("click", function() {
-
                 $(this).toggleClass('open');
                 $('.header_text').toggleClass('open');
             });
         });
+
+        $(function() {
+            $('.gNav-menu li a').on("click", function() {
+                $('.header_text').removeClass('open');
+            });
+        });
+
 
         $(function() {
             $('.open_animation').each(function() {
@@ -298,13 +304,6 @@ if (!isset($_SESSION["session_id"]) || $_SESSION["session_id"] != session_id()) 
                         $(this).addClass('active');
                     }
                 });
-            });
-        });
-
-
-        $(function() {
-            $('.gNav-menu li a').on("click", function() {
-                $('.header_text').removeClass('open');
             });
         });
 

@@ -625,7 +625,7 @@ body{
   letter-spacing: 0.2em;
   display: flex;
   justify-content: center;
-  font-size: 18px;
+  font-size: 14px;
   color: rgba(255, 255, 255, 0.74);
   margin: 150px 0 50px 0;
 }
@@ -638,7 +638,7 @@ body{
     position: absolute;
     bottom: -10px;
     /*線の形状*/
-    width: 100%;
+    width: 10%;
     height: 1px;
     background: rgba(255, 255, 255, 0.5);
 }
@@ -655,19 +655,29 @@ body{
 @keyframes arrowlong01{
     0%{width:0;opacity:0}
     20%{width:0;opacity:1}
-    80%{width: 50%;opacity:1}
-    100%{width: 50%;opacity:0}
+    80%{width: 40%;opacity:1}
+    100%{width: 40%;opacity:0}
 }
 
 @keyframes arrowlong02{
     0%{left:0;opacity:0}
     20%{left:0;opacity:1}
-    80%{left:50%;opacity:1}
-    100%{left:50%;opacity:0}
+    80%{left:40%;opacity:1}
+    100%{left:40%;opacity:0}
 }
 
 .text{
   margin-top: 100px;
+}
+
+.text a{
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 200;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.74);
+  margin: 40px 0 0 0;
 }
 
 .text p{
@@ -680,9 +690,10 @@ body{
   margin: 40px 0 0 0;
 }
 
+
 .home{
   font-family: urw-din;
-  font-style: normal;
+  font-size: 14px;
   letter-spacing: 0.2em;
   margin-top: 80px;
 }

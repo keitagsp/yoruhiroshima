@@ -8,7 +8,7 @@
 
   <!-- jquery--------------------------------------------------------------------------------------------------- -->
 
-  <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
   <script type="text/javascript" src="slick-1.8.1/slick/slick.min.js"></script>
 
   <!-- フォント--------------------------------------------------------------------------------------------------- -->
@@ -32,6 +32,29 @@
 
 <body>
   <div class="wrapper">
+
+    <!-- ヘッダー -->
+    <div class="header">
+      <div class="minitsuki">
+        <a href="index.html"><img src="./img/tsukikuro.png" alt=""></a>
+      </div>
+      <div class="btn-gNav">
+        <span></span>
+        <span></span>
+      </div>
+      <div class="header_text">
+        <ul class="gnavi">
+          <li><a href="index.php">HOME</a></li>
+          <li><a href="calender02.html">CALENDER</a></li>
+          <li><a href="audience.php">AUDIENCE</a></li>
+          <li><a href="https://suzuri.jp/keitagsp" target="_blank" rel="noopener noreferrer">GOODS</a></li>
+          <li><a href="party_dj.html">PARTY & DJ's</a></li>
+          <li><a href="#access">ACCESS</a></li>
+          <li><a href="login.html">LOGIN</a></li>
+        </ul>
+      </div>
+    </div>
+
 
     <div class="form_parent">
       <form action="login_register_act.php" method="post">
@@ -93,18 +116,60 @@
   </div>
 
 
-  <div>
-    <button>登録</button>
-  </div>
-
-  <a href="login.php">ログイン</a>
-
-  </form>
-
-  </div>
-  </div>
 
   <script>
+    $(function() {
+      $('.btn-gNav').on("click", function() {
+        $(this).toggleClass('open');
+        $('.header_text').toggleClass('open');
+      });
+    });
+
+    $(function() {
+      $('.gNav-menu li a').on("click", function() {
+        $('.header_text').removeClass('open');
+      });
+    });
+
+
+    $(function() {
+      $(window).on('load scroll', function() {
+        $('.open_animation').each(function() {
+          //ターゲットの位置を取得
+          var target = $(this).offset().top;
+          //スクロール量を取得
+          var scroll = $(window).scrollTop();
+          //ウィンドウの高さを取得
+          var height = $(window).height();
+          //ターゲットまでスクロールするとフェードインする
+          if (scroll > target - height) {
+            //クラスを付与
+            $(this).addClass('open_active');
+          }
+        });
+      });
+    });
+
+
+    $(function() {
+      $(window).on('load scroll', function() {
+        $('.animation').each(function() {
+          //ターゲットの位置を取得
+          var target = $(this).offset().top;
+          //スクロール量を取得
+          var scroll = $(window).scrollTop();
+          //ウィンドウの高さを取得
+          var height = $(window).height();
+          //ターゲットまでスクロールするとフェードインする
+          if (scroll > target - height) {
+            //クラスを付与
+            $(this).addClass('active');
+          }
+        });
+      });
+    });
+
+
     $(document).ready(function() {
       /* 各フォームからフォーカスアウトしたときに実行 */
       $(":text,textarea,:password,#email").blur(function() {
@@ -157,6 +222,9 @@
       });
     });
   </script>
+
+
+  <script src="js/main.js"></script>
 
 </body>
 
