@@ -709,7 +709,6 @@ table#top {
 }
 
 
-
 .total td{ 
     text-align: right;
     font-weight: 600;
@@ -722,7 +721,7 @@ table#top {
     flex-direction: column;
 }
 
-button.buy{
+a.buy{
     display: flex;
     justify-content: center;
     width: 100%;
@@ -747,6 +746,7 @@ background-position: 100% 50%
 background-position: 0% 50%
 }
 }
+
 
 a.back{
     font-size: 13px;

@@ -73,9 +73,7 @@ foreach ($products as $name => $product) {
 
 
             <table class="cart-table">
-
                 <tbody>
-
                     <?php foreach ($products as $name => $product) : ?>
                         <tr>
                             <td label="商品名："><?php echo $name; ?></td>
@@ -92,16 +90,21 @@ foreach ($products as $name => $product) {
                     <?php endforeach; ?>
                     <tr class="total">
                         <th colspan="3">TOTAL</th>
-                        <td class="total_price" colspan="2">¥<?php echo $total; ?></td>
+                        <td class="total_price" colspan="2">¥<?php echo $total;?></td>
                     </tr>
                 </tbody>
             </table>
+
+
             <div class="cart-btn">
-                <button type="button" class="buy">購入確定</button>
+                <a href="buy_complet.html" type="button" class="buy">購入確定</a>
                 <a href="party_detail.php" class="back">[ 戻る ]</a>
             </div>
+            
         </div>
+
     </div>
+
 </body>
 
 </html>
