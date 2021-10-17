@@ -26,6 +26,7 @@ if (!$val) {
   echo "<p>ログイン情報に誤りがあります．</p>";
   echo '<a href="login.php">login</a>';
   exit();
+  
 } else {
   $_SESSION = array();
   $_SESSION["session_id"] = session_id();

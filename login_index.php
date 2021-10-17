@@ -224,8 +224,6 @@ if (!isset($_SESSION["session_id"]) || $_SESSION["session_id"] != session_id()) 
 
 
 
-
-
         <!-- 求人 -->
         <div class="wanted animation">
             <div class="wanted_text">
@@ -249,6 +247,7 @@ if (!isset($_SESSION["session_id"]) || $_SESSION["session_id"] != session_id()) 
         <div class="border_anime animation">
             <p>ACCESS</p>
         </div>
+        
         <div class="access animation" id="access">
             Arts & Tecnology Lab , Yoru<br>
             〒730-0028 広島県広島市中区流川町<br>

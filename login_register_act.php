@@ -36,7 +36,7 @@ if ($status == false) {
 
 if ($stmt->fetchColumn() > 0) {
   echo "<p>このメールアドレスは既に登録されています．</p>";
-  echo '<a href="login.php">login</a>';
+  echo '<a href="login.html">login</a>';
   exit();
 }
 
@@ -56,6 +56,6 @@ if ($status == false) {
   echo json_encode(["error_msg" => "{$error[2]}"]);
   exit();
 } else {
-  header("Location:login.php");
+  header("Location:login.html");
   exit();
 }

@@ -1,9 +1,12 @@
 <?php
+
 session_start();
+
 if ( !isset(  $_SESSION["session_id"]) || $_SESSION["session_id"] != session_id()){
     header("Location:no_login.html");
     exit();
 }
+
 ?>
 
 
@@ -24,19 +27,17 @@ if ( !isset(  $_SESSION["session_id"]) || $_SESSION["session_id"] != session_id(
 
 <!-- フォント--------------------------------------------------------------------------------------------------- -->
 
-    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.2.0/dist/css/yakuhanjp.min.css">
 
     <link rel="stylesheet" href="https://use.typekit.net/opa4ojb.css">
         
-    <!-- css--------------------------------------------------------------------------------------------------- -->
+<!-- css--------------------------------------------------------------------------------------------------- -->
 
     <link rel="stylesheet" href="./css/audience.css" media="screen and (min-width:600px)">
     <link rel="stylesheet" href="./css/audience_small.css" media="screen and (max-width:600px)">
     <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css" media="screen and (min-width:600px)">
     <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/small-slick-theme.css" media="screen and (max-width:600px)">
     <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css">
-
 
     <title>yoru</title>
 

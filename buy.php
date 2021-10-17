@@ -1,5 +1,7 @@
 <?php
+include("functions.php");
 
+$pdo = connect_to_db();
 
 $delete_name = (isset($_POST['delete_name'])) ? htmlspecialchars($_POST['delete_name'], ENT_QUOTES, 'utf-8') : '';
 
@@ -50,59 +52,53 @@ foreach ($products as $name => $product) {
     <div class="wrapper">
 
         <div class="form_parent">
-
             <div class="border_anime">
                 <p>CHECK OUT</p>
             </div>
 
-
-            <table class="cart-table" id="top">
-
-                <tbody>
-                    <tr>
-                        <td>
-                            <p>Mail</p>
-                        </td>
-                        <td>
-                            <?php echo ($_SESSION["email"]); ?>
-                        </td>
-                    </tr>
-
-                </tbody>
-            </table>
-
-
-            <table class="cart-table">
-                <tbody>
-                    <?php foreach ($products as $name => $product) : ?>
+            <form action="buy_act.php" method="post">
+                <table class="cart-table" id="top">
+                    <tbody>
                         <tr>
-                            <td label="商品名："><?php echo $name; ?></td>
-                            <td label="価格：" class="text-right">¥<?php echo $product['price']; ?></td>
-                            <td label="個数：" class="text-right"><?php echo $product['count']; ?>枚</td>
-                            <td label="小計：" class="text-right">¥<?php echo $product['price'] * $product['count']; ?></td>
                             <td>
-                                <form action="buy.php" method="post">
-                                    <input type="hidden" name="delete_name" value="<?php echo $name; ?>">
-                                    <button type="submit" class="btn btn-red">取消し</button>
-                                </form>
+                                <p>Mail</p>
+                            </td>
+                            <td>
+                                <input type="hidden" name="email" value="<?= ($_SESSION["email"]); ?> ">
+                                <?= ($_SESSION["email"]); ?>
                             </td>
                         </tr>
-                    <?php endforeach; ?>
-                    <tr class="total">
-                        <th colspan="3">TOTAL</th>
-                        <td class="total_price" colspan="2">¥<?php echo $total;?></td>
-                    </tr>
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+                <table class="cart-table">
+                    <tbody>
+                        <?php foreach ($products as $name => $product) : ?>
+                            <tr>
+                                <td label="商品名："><?= $name; ?></td>
+                                <input type="hidden" name="name" value="<?= $name; ?>">
+                                <td label="価格：" class="text-right">¥<?= $product['price']; ?></td>
+                                <td label="個数：" class="text-right"><?= $product['count']; ?>枚</td>
+                                <input type="hidden" name="count" value="<?= $product['count']; ?> ">
+                                <td label="小計：" class="text-right">¥<?= $product['price'] * $product['count']; ?></td>
+                                <td>
+                                    <input type="hidden" name="delete_name" value="<?= $name; ?>">
+                                    <button type="submit" class="btn btn-red">取消</button>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                        <tr class="total">
+                            <th colspan="3">TOTAL</th>
+                            <td class="total_price" colspan="2">¥<?= $total; ?></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="cart-btn">
+                    <button class="buy send">購入確定</button>
+                    <a href="party_detail.php" class="back">[ 戻る ]</a>
+                </div>
+            </form>
 
-
-            <div class="cart-btn">
-                <a href="buy_complet.html" type="button" class="buy">購入確定</a>
-                <a href="party_detail.php" class="back">[ 戻る ]</a>
-            </div>
-            
         </div>
-
     </div>
 
 </body>
