@@ -32,6 +32,6 @@ if ($status == false) {
     echo json_encode(["error_msg" => "{$error[2]}"]);
     exit();
 } else {
-    header("Location:buy_complete.html");
+    header("Location:buy_complet.html");
     exit();
 }
