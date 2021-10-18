@@ -70,34 +70,34 @@
           <p class="item_label">アカウント名</p>
           <p class="item_label_en">Acount Name</p>
         </div>
-        <input class="input" type="text" class="touroku_input" id="username" name="username" maxlength="20"  required>
+        <input class="input" type="text" class="touroku_input" id="username" name="username" maxlength="20"  >
 
         <div class="form_group">
           <p class="item_label">メール</p>
           <p class="item_label_en">Mail</p>
         </div>
-        <input class="input" type="email" class="touroku_input" id="email" name="email"  required>
+        <input class="input" type="email" class="touroku_input" id="email" name="email"  >
 
 
         <div class="form_group">
           <p class="item_label">パスワード</p>
           <p class="item_label_en">password</p>
         </div>
-        <input class="input" type="text" class="touroku_input" id="password" name="password"  required>
+        <input class="input" type="text" class="touroku_input" id="password" name="password"  >
 
 
         <div class="form_group">
           <p class="item_label">住所</p>
           <p class="item_label_en">Address</p>
         </div>
-        <input class="input" type="text" class="touroku_input" id="address" name="address"  required>
+        <input class="input" type="text" class="touroku_input" id="address" name="address"  >
 
 
         <div class="form_group">
           <p class="item_label">携帯電話番号</p>
           <p class="item_label_en">Mobile Telephone</p>
         </div>
-        <input class="input" type="tel" class="touroku_input" id="mobile" name="mobile"  required>
+        <input class="input" type="tel" class="touroku_input" id="mobile" name="mobile"  >
 
 
         <div>
@@ -175,7 +175,7 @@
       /* 各フォームからフォーカスアウトしたときに実行 */
       $(":text,textarea,:password,#email").blur(function() {
 
-        if ($(this).attr('validate').match("required")) {
+        if ($(this).attr('validate').match("")) {
           if ($(this).val() == "") {
             if ($(this).next().text() === "") {
               $(this).css("background-color", "#ffe8e8");
