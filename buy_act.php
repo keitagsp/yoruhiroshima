@@ -33,5 +33,6 @@ if ($status == false) {
     exit();
 } else {
     header("Location:buy_complet.html");
-    exit();
+    var_dump($_POST);
+    exit("ok");
 }
