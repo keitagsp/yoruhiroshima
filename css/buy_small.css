@@ -735,7 +735,7 @@ a.buy{
     animation: gradient 5s ease infinite;
 }
 
-.buy .send{
+button.buy.send{
     display: flex;
     justify-content: center;
     width: 100%;
