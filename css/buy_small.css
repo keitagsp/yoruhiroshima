@@ -735,6 +735,20 @@ a.buy{
     animation: gradient 5s ease infinite;
 }
 
+.buy .send{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 12px;
+    letter-spacing: 0.5em;
+    padding: 18px 80px;
+    margin-top: 80px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, rgb(44, 44, 44),rgb(34, 34, 34),rgb(44, 44, 44),rgb(34, 34, 34));
+    background-size: 200% 200%;
+    animation: gradient 5s ease infinite;
+}
+
 @keyframes gradient {
 0% {
 background-position: 0% 50%
