@@ -93,7 +93,7 @@ foreach ($products as $name => $product) {
                     </tbody>
                 </table>
                 <div class="cart-btn">
-                    <button class="buy send">a購入確定</button>
+                    <button class="buy send">購入確定</button>
                     <a href="party_detail.php" class="back">[ 戻る ]</a>
                 </div>
             </form>
