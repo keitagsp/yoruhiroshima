@@ -1,3 +1,15 @@
+<?php
+include("functions.php");
+
+$pdo = connect_to_db();
+
+session_start();
+
+!isset($_SESSION["email"]);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,6 +30,7 @@
 
     <title>PAY</title>
 </head>
+
 <body>
 
     <div class="border_anime">
@@ -25,64 +38,66 @@
     </div>
 
     <div class="form_parent">
-        <form action="contact_create.php" method="POST">
+        <form action="pay_act.php" method="POST">
 
-        <div class="select_area">
-            <div class="form_group">
-                <p class="item_label">受取り方法</p>
-            </div>
-            <select id="pay" onchange="viewChange();" name="posi">
-                <option value="select1">選んでください</option>
-                <option value="select2">LINE PAY</option>
-                <option value="select3">銀行振込</option>
-            </select>
-        </div>
-
-        <div class="change_area">
-
-
-            <div id="Box1">
-            </div>
-        
-            <div id="Box2" style="display:none;">
+            <div class="select_area">
                 <div class="form_group">
-                    <p class="item_label">LINE PAY ナンバー</p>
+                    <p class="item_label">受取り方法</p>
                 </div>
-                <input class="input" type="text" name="name">
+                <select id="pay" onchange="viewChange();" name="posi">
+                    <option value="select1">選んでください</option>
+                    <option value="select2">LINE PAY</option>
+                    <option value="select3">銀行振込</option>
+                </select>
             </div>
 
-            <div id="Box3" style="display:none;">
+            <input type="hidden" name="email" value="<?= ($_SESSION["email"]); ?> ">
 
-                <div class="form_group">
-                    <p class="item_label">金融機関名</p>
+            <div class="change_area">
+
+
+                <div id="Box1">
                 </div>
-                <input class="input" type="text" name="name">
-                <div class="form_group">
-                    <p class="item_label">口座名義</p>
+
+                <div id="Box2" style="display:none;">
+                    <div class="form_group">
+                        <p class="item_label">LINE PAY ナンバー</p>
+                    </div>
+                    <input class="input" type="text" name="name">
                 </div>
-                <input class="input" type="text" name="name">
-                <div class="form_group">
-                    <p class="item_label">支店名</p>
+
+                <div id="Box3" style="display:none;">
+
+                    <div class="form_group">
+                        <p class="item_label">金融機関名</p>
+                    </div>
+                    <input class="input" type="text" name="bank">
+                    <div class="form_group">
+                        <p class="item_label">口座名義</p>
+                    </div>
+                    <input class="input" type="text" name="name">
+                    <div class="form_group">
+                        <p class="item_label">支店名</p>
+                    </div>
+                    <input class="input" type="text" name="branch">
+                    <div class="form_group">
+                        <p class="item_label">口座番号</p>
+                    </div>
+                    <input class="input" type="text" name="number">
+
                 </div>
-                <input class="input" type="text" name="name">
-                <div class="form_group">
-                    <p class="item_label">口座番号</p>
-                </div>
-                <input class="input" type="text" name="name">
 
             </div>
-            
-        </div>
+            <button class="button send">送信</button>
 
         </form>
-                <a href="complet.html" class="button send">送信</a>
 
     </div>
 
 
 
-<script>
-    function viewChange() {
+    <script>
+        function viewChange() {
             if (document.getElementById('pay')) {
                 id = document.getElementById('pay').value;
                 if (id == 'select1') {
@@ -102,8 +117,9 @@
 
             window.onload = viewChange;
         }
-</script>
+    </script>
 
 
 </body>
+
 </html>
