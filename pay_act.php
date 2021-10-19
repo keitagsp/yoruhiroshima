@@ -25,7 +25,7 @@ $pdo = connect_to_db();
 $sql = 'INSERT INTO pay(id, email, bank, name, branch, number, created_at) VALUES(NULL,:email, :bank, :name, :branch, :number, sysdate())';
 
 $stmt = $pdo->prepare($sql);
-$stmt->bindValue(':email', $bank, PDO::PARAM_STR);
+$stmt->bindValue(':email', $email, PDO::PARAM_STR);
 $stmt->bindValue(':bank', $bank, PDO::PARAM_STR);
 $stmt->bindValue(':name', $name, PDO::PARAM_STR);
 $stmt->bindValue(':branch', $branch, PDO::PARAM_STR);
